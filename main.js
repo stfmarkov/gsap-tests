@@ -88,7 +88,7 @@ function init() {
     },
   });
 
-  let tl = gsap.timeline({
+  let tl_v = gsap.timeline({
     scrollTrigger: {
       trigger: ".player__slides",
       pin: true, // pin the trigger element while active
@@ -100,51 +100,51 @@ function init() {
   });
 
   // add animations and labels to the timeline
-  tl.to(".player__heading", {
+  tl_v.to(".player__heading", {
     y: -350,
     opacity: 0,
     duration: 5,
     delay: 3,
   });
-  tl.to(".player-wrapper__player", {
+  tl_v.to(".player-wrapper__player", {
     opacity: 1,
     duration: 5,
     delay: -5,
   });
-  tl.from(".player__text", {
+  tl_v.from(".player__text", {
     opacity: 0,
     y: 350,
     duration: 5,
   });
-  tl.to(".player-wrapper__player", {
+  tl_v.to(".player-wrapper__player", {
     opacity: 0.1,
     duration: 5,
     delay: -5,
   });
-  tl.to(".player__text", {
+  tl_v.to(".player__text", {
     opacity: 0,
     y: -350,
     duration: 5,
     delay: 3,
   });
-  tl.to(".player-wrapper__player", {
+  tl_v.to(".player-wrapper__player", {
     opacity: 1,
     duration: 5,
     delay: -5,
   });
 
-  tl.to(".player-wrapper", {
+  tl_v.to(".player-wrapper", {
     scaleX: 0.43,
     scaleY: 0.43,
     duration: 10,
   });
 
-  tl.to(".player-wrapper__ui", {
+  tl_v.to(".player-wrapper__ui", {
     opacity: 1,
     delay: -10,
     duration: 10,
   });
-  tl.to(".player-wrapper__hardware", {
+  tl_v.to(".player-wrapper__hardware", {
     opacity: 1,
     delay: -10,
     duration: 10,
