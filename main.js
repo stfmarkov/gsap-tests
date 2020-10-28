@@ -117,7 +117,7 @@ function init() {
     duration: 10,
   });
   tl.to(".player-wrapper__player", {
-    opacity: 0,
+    opacity: 0.1,
     duration: 10,
     delay: -10,
   });
