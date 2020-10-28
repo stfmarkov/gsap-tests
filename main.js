@@ -93,7 +93,7 @@ function init() {
       trigger: ".player__slides",
       pin: true, // pin the trigger element while active
       start: "top top", // when the top of the trigger hits the top of the viewport
-      //   end: "+=100%",
+      end: "+=3000px",
       scrub: true,
       onUpdate: videoAnimationUpdated,
     },
@@ -103,23 +103,23 @@ function init() {
   tl.to(".player__heading", {
     y: -350,
     opacity: 0,
-    duration: 10,
+    duration: 5,
     delay: 3,
   });
   tl.to(".player-wrapper__player", {
     opacity: 1,
-    duration: 10,
-    delay: -10,
+    duration: 5,
+    delay: -5,
   });
   tl.from(".player__text", {
     opacity: 0,
     y: 350,
-    duration: 10,
+    duration: 5,
   });
   tl.to(".player-wrapper__player", {
     opacity: 0.1,
-    duration: 10,
-    delay: -10,
+    duration: 5,
+    delay: -5,
   });
   tl.to(".player__text", {
     opacity: 0,
@@ -160,7 +160,7 @@ function init() {
       video.play();
       isRuning = true;
     }
-    if (isRuning && (event.progress > 0.72 || event.progress < 0.1)) {
+    if (isRuning && (event.progress > 0.7 || event.progress < 0.1)) {
       video.pause();
       isRuning = false;
     }
