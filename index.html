@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
   </head>
   <body>
+    <div class="cursor"></div>
     <section class="section-5g">
       <div class="section-5g__heading">
         <h1>Superfast wireless</h1>
@@ -45,7 +46,7 @@
       </div>
 
       <p
-        class="section-intro typography-section-intro large-9 medium-8 small-12 large-centered"
+        class="fade-in section-intro typography-section-intro large-9 medium-8 small-12 large-centered"
         style="opacity: 1"
       >
         5G transforms iPhone with accelerated wireless speeds and better
@@ -58,7 +59,7 @@
         amazing possibilities for the future of apps.
       </p>
 
-      <div class="innovation-block" style="opacity: 1">
+      <div class="fade-in innovation-block" style="opacity: 1">
         <div class="innovation-callout callout-iphone large-12 js-will-change">
           <p class="gradient-text typography-innovation-copy-gradient">
             <span>iPhone makes the most of 5G</span>
@@ -111,82 +112,77 @@
           trails begin.
         </p>
       </div>
-    </section>
-    <div
-      class="subsection-wrapper section-content will-change active"
-      data-analytics-section-engagement="name: video dolby vision"
-      tabindex="-1"
-      style="transform: matrix(1, 0, 0, 1, 0, 18.725)"
-    >
-      <h4
-        class="subsection-headline typography-section-headline-alt large-8 large-offset-2 medium-7 small-12 small-offset-0 will-change"
-        data-text-parallax="subCopyHeadline"
-        style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1"
-      >
-        And boom.<br />You own a&nbsp;film&nbsp;studio.
-      </h4>
-      <p
-        class="subsection-intro typography-section-intro-reduced large-6 large-offset-2 medium-7 small-12 small-offset-0 will-change"
-        data-text-parallax="subCopyIntro"
-        style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1"
-      >
-        Now you can record 4K HDR video with Dolby Vision. Edit in Photos or
-        iMovie. Then zap it to your TV using AirPlay<sup
-          class="footnote footnote-number"
-          ><a href="#footnote-10" aria-label="Footnote 7">7</a></sup
-        >
-        to see all that color and detail. It’s a start-to-finish cinematic
-        experience — found only on iPhone. Which comes in handy when your dog
-        does something adorable.
-      </p>
       <div
-        class="innovation-callout innovation-callout large-4 large-offset-2 medium-5 small-12 small-offset-0"
+        class="player__footer subsection-wrapper section-content"
+        data-analytics-section-engagement="name: video dolby vision"
+        tabindex="-1"
       >
-        <div
-          class="innovation-callout-keyline will-change"
-          data-text-parallax="subCopyKeyline"
-          style="transform: matrix(0.999998, 0, 0, 1, 0, 0); opacity: 0.999997"
-        ></div>
-        <p
-          class="innovation-callout-copy typography-innovation-callout will-change"
-          data-text-parallax="subCopyCallout"
-          style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1"
+        <h4
+          class="subsection-headline typography-section-headline-alt large-8 large-offset-2 medium-7 small-12 small-offset-0 will-change"
+          data-text-parallax="subCopyHeadline"
         >
-          First camera ever to record in Dolby Vision
+          And boom.<br />You own a&nbsp;film&nbsp;studio.
+        </h4>
+        <p
+          class="subsection-intro typography-section-intro-reduced large-6 large-offset-2 medium-7 small-12 small-offset-0 will-change"
+          data-text-parallax="subCopyIntro"
+        >
+          Now you can record 4K HDR video with Dolby Vision. Edit in Photos or
+          iMovie. Then zap it to your TV using AirPlay<sup
+            class="footnote footnote-number"
+            ><a href="#footnote-10" aria-label="Footnote 7">7</a></sup
+          >
+          to see all that color and detail. It’s a start-to-finish cinematic
+          experience — found only on iPhone. Which comes in handy when your dog
+          does something adorable.
         </p>
-        <p
-          class="section-tout typography-section-tout will-change"
-          data-text-parallax="subCopyTout"
-          style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1"
-        ></p>
         <div
-          data-text-parallax="subCopyCta"
-          style="transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1"
-          class="will-change"
+          class="innovation-callout innovation-callout large-4 large-offset-2 medium-5 small-12 small-offset-0"
         >
-          <div class="modal-button-wrapper">
-            <label
-              tabindex="0"
-              class="modal-trigger-cta"
-              for="modal-trigger-hdr-video"
-            >
-              <span
-                class="button button-modal typography-modal-button"
-                role="button"
-                aria-expanded="false"
-                aria-controls="modal-trigger-hdr-video"
-                aria-label="Find out how iPhone has the first camera ever to record in Dolby Vision."
-                data-analytics-click="prop3:find out how - dolby vision"
-                data-analytics-title="find out how - dolby vision"
-                data-analytics-intrapage-link=""
-                >Find out how</span
+          <div
+            class="innovation-callout-keyline will-change"
+            data-text-parallax="subCopyKeyline"
+          ></div>
+          <p
+            class="innovation-callout-copy typography-innovation-callout will-change"
+            data-text-parallax="subCopyCallout"
+          >
+            First camera ever to record in Dolby Vision
+          </p>
+          <p
+            class="section-tout typography-section-tout will-change"
+            data-text-parallax="subCopyTout"
+          ></p>
+          <div data-text-parallax="subCopyCta" class="will-change">
+            <div class="modal-button-wrapper">
+              <label
+                tabindex="0"
+                class="modal-trigger-cta"
+                for="modal-trigger-hdr-video"
               >
-            </label>
+                <span
+                  class="button button-modal typography-modal-button"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="modal-trigger-hdr-video"
+                  aria-label="Find out how iPhone has the first camera ever to record in Dolby Vision."
+                  data-analytics-click="prop3:find out how - dolby vision"
+                  data-analytics-title="find out how - dolby vision"
+                  data-analytics-intrapage-link=""
+                  >Find out how</span
+                >
+              </label>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </body>
+
+  <!-- Real project will use imports -->
+  <script src="./animationSections/cursor.js"></script>
+  <script src="./animationSections/5GSection.js"></script>
+  <script src="./animationSections/videoSection.js"></script>
 
   <script src="main.js"></script>
 </html>
