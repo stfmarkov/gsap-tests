@@ -4,7 +4,7 @@ function initVideoSection() {
       trigger: ".player__slides",
       pin: true, // pin the trigger element while active
       start: "top top", // when the top of the trigger hits the top of the viewport
-      end: "+=3000px",
+      end: "+=3500px",
       scrub: true,
       onUpdate: videoAnimationUpdated,
     },
@@ -78,15 +78,36 @@ function initVideoSection() {
       },
       "revealVideo"
     )
+    .addLabel("playerExit", "+=1.5")
     .to(".player-wrapper", {
       y: "-=200%",
       duration: 10,
     })
-    .from(".player__footer", {
-      opacity: 0,
-      y: 350,
-      duration: 10,
-    });
+    .from(
+      ".player__footer",
+      {
+        opacity: 0,
+        duration: 2,
+      },
+      "playerExit"
+    )
+    .from(
+      ".player__footer .subsection-intro, .player__footer .innovation-callout",
+      {
+        opacity: 0,
+        y: 20,
+        duration: 7,
+      },
+      "playerExit"
+    )
+    .from(
+      ".section-video .innovation-callout-keyline",
+      {
+        scaleX: 0.3,
+        duration: 4,
+      },
+      "playerExit"
+    );
 
   const video = document.querySelector(".player-wrapper__player");
   video.loop = true;
@@ -98,7 +119,7 @@ function initVideoSection() {
       video.play();
       isRuning = true;
     }
-    if (isRuning && (event.progress > 0.7 || event.progress < 0.1)) {
+    if (isRuning && (event.progress > 0.54 || event.progress < 0.1)) {
       video.pause();
       isRuning = false;
     }

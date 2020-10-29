@@ -2,7 +2,7 @@ function initCursor() {
   const hoverable = document.querySelectorAll("a, button");
   hoverable.forEach((item) => item.classList.add("hover"));
 
-  var hover = document.querySelector(".hover");
+  var hovers = document.querySelectorAll(".hover");
   gsap.set(".cursor", {
     xPercent: -50,
     yPercent: -50,
@@ -17,18 +17,20 @@ function initCursor() {
     });
   });
 
-  hover.addEventListener("mouseenter", function (event) {
-    gsap.to(cur, 0.2, {
-      opacity: 0.9,
-      scaleX: 4,
-      scaleY: 4,
+  hovers.forEach((hover) => {
+    hover.addEventListener("mouseenter", function (event) {
+      gsap.to(cur, 0.2, {
+        opacity: 0.9,
+        scaleX: 4,
+        scaleY: 4,
+      });
     });
-  });
-  hover.addEventListener("mouseleave", function (event) {
-    gsap.to(cur, 0.2, {
-      opacity: 1,
-      scaleX: 1,
-      scaleY: 1,
+    hover.addEventListener("mouseleave", function (event) {
+      gsap.to(cur, 0.2, {
+        opacity: 1,
+        scaleX: 1,
+        scaleY: 1,
+      });
     });
   });
 }

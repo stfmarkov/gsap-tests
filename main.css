@@ -6,6 +6,7 @@
 
 body {
   background: #000;
+  color: #f5f5f7;
 }
 
 .section-5g {
@@ -70,6 +71,7 @@ body {
 .download {
   opacity: 0;
   transform: translateY(200px) scaleX(3) scaleY(3);
+  list-style-type: none;
 }
 
 .screen ul {
@@ -239,6 +241,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
+  pointer-events: none;
 }
 
 .typography-section-headline-alt {
@@ -305,6 +308,7 @@ body {
 .player__footer {
   z-index: -1;
   position: relative;
+  margin-top: 205px;
 }
 
 .cursor {
@@ -318,4 +322,31 @@ body {
   background: #fff;
   pointer-events: none;
   mix-blend-mode: difference;
+}
+
+.button-modal {
+  border: 2px solid #1d1d1f;
+  transition: all 350ms ease-in-out;
+  background: rgba(0, 0, 0, 0);
+  color: #1d1d1f;
+  font-size: 17px;
+  line-height: 1.23536;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  min-width: 26px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 22px;
+
+  border-color: #f5f5f7;
+  background: rgba(0, 0, 0, 0);
+  color: #f5f5f7;
+
+  display: inline-block;
+  margin-top: 30px;
+  cursor: pointer;
 }
