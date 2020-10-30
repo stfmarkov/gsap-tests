@@ -15,14 +15,14 @@ function init5GSection() {
   );
 
   gsap.fromTo(
-    ".screen",
+    ".section-5g .screen",
     {
       translateY: 0,
     },
     {
       translateY: -250,
       scrollTrigger: {
-        trigger: ".screen",
+        trigger: ".section-5g .screen",
         scrub: true,
         start: "top 50%",
         end: "top -50%",
@@ -81,6 +81,4 @@ function init5GSection() {
       opacity: 0,
     });
   });
-
-  
 }

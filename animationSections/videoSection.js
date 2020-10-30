@@ -1,10 +1,22 @@
 function initVideoSection() {
+  const slides = gsap.utils.toArray(".player__slide");
+  const positionModif = 100 / slides.length;
+  slides.forEach((slide, i) => {
+    slide.style.top = -i * positionModif + "%";
+    //   ScrollTrigger.create({
+    //     trigger: panel,
+    //     start: "top top",
+    //     pin: ".test",
+    //     pinSpacing: false,
+    //   });
+  });
+
   let tl_v = gsap.timeline({
     scrollTrigger: {
       trigger: ".player__slides",
       pin: true, // pin the trigger element while active
       start: "top top", // when the top of the trigger hits the top of the viewport
-      end: "+=3500px",
+      end: "+=4500px",
       scrub: true,
       onUpdate: videoAnimationUpdated,
     },

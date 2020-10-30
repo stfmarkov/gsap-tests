@@ -52,7 +52,7 @@ body {
     "Arial", sans-serif;
 }
 
-.screen {
+.section-5g .screen {
   margin: 0 auto;
   width: 770px;
   height: 1336px;
@@ -157,21 +157,19 @@ body {
   color: #86868b;
 }
 
+.player__slide {
+  height: 100vh;
+  position: relative;
+}
+
 .player__slides {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
 }
 
 .player-wrapper {
-  position: absolute;
-  padding-bottom: calc(56.25% / 2);
-  height: 0;
-  width: 50%;
-  top: -50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(2);
-  left: 50%;
+  height: 100vh;
 }
 
 .player-wrapper__ui,
@@ -236,11 +234,6 @@ body {
 
 .player__heading,
 .player__text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   pointer-events: none;
 }
 
@@ -349,4 +342,195 @@ body {
   display: inline-block;
   margin-top: 30px;
   cursor: pointer;
+}
+
+.phone-lockup-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.spread-icons {
+  background: #fff;
+  height: 100vh;
+  padding-top: 152px;
+}
+
+.spread-icons .image-side-phone-left {
+  width: 250px;
+  height: 500px;
+  background-size: 250px 500px;
+  background-repeat: no-repeat;
+  background-image: url("./pinned_conversations__bwn8twul4emu_large.jpg");
+}
+
+.spread-icons .image-hardware {
+  margin: 0 auto;
+  width: 248px;
+  height: 498px;
+  background-size: 248px 498px;
+  background-repeat: no-repeat;
+  background-image: url("./hardware__f3a2vdz3c8ey_large.png");
+  position: relative;
+}
+
+.center-phone {
+  text-align: center;
+}
+
+.side-phone-right {
+  text-align: right;
+}
+
+.spread-icons .image-side-phone-right {
+  margin-left: auto;
+  width: 250px;
+  height: 500px;
+  background-size: 250px 500px;
+  background-repeat: no-repeat;
+  background-image: url("./app_clips__faiihom6lxei_large.jpg");
+}
+
+.spread-icons .content-copy {
+  color: #86868b;
+  padding-top: 40px;
+}
+
+.typography-ios-callout {
+  font-size: 17px;
+  line-height: 1.23536;
+  font-weight: 600;
+  letter-spacing: -0.022em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.spread-icons .phone-lockup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.spread-icons .screen-container {
+  position: absolute;
+  top: 12px;
+  left: 13px;
+  width: 220px;
+}
+
+.spread-icons .image-top-ui {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+
+  width: 196px;
+  height: 9px;
+  background-size: 196px 9px;
+  background-repeat: no-repeat;
+  background-image: url("./top_ui__elw6ab728hua_large.png");
+}
+
+.spread-icons .intro-wallpaper {
+  background-repeat: no-repeat;
+  background-image: url("./intro_wallpaper__csffxcv6zpme_large.jpg");
+
+  min-height: 0;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.spread-icons .intro-wallpaper {
+  content: "";
+  display: block;
+  padding-bottom: 216.38889%;
+}
+
+.spread-icons .hardware-container {
+  position: relative;
+}
+
+.spread-icons .screen {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 90px);
+  grid-template-rows: repeat(3, 99px);
+  grid-gap: 12px 12px;
+  justify-content: center;
+  align-content: center;
+  z-index: 3;
+}
+
+.spread-icons .chiclet-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 34px);
+  grid-template-rows: repeat(2, 45px);
+  grid-gap: 10px 16px;
+  justify-content: center;
+}
+
+.spread-icons .screen .widget,
+.spread-icons .screen .chiclet {
+  background-size: 50%;
+}
+
+.spread-icons .image-app-chiclet-clock {
+  width: 68px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-image: url("./clock__cw0mrxyi9ree_large.png");
+}
+
+.spread-icons .image-app-chiclet-camera {
+  width: 68px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-image: url("./camera__gaz2y5mrghea_large.png");
+}
+
+.spread-icons .image-app-chiclet-tv {
+  width: 68px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-image: url("./tv__fvzdvtqns6q2_large.png");
+}
+
+.spread-icons .image-app-chiclet-stocks {
+  width: 68px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-image: url("./stocks__f1n2ad3ebw6e_large.png");
+}
+
+.spread-icons .image-app-widget-activity {
+  width: 178px;
+  height: 198px;
+  background-size: 178px 198px;
+  background-repeat: no-repeat;
+  background-image: url("./activity__cmmfnkztfmuu_large.png");
+}
+
+.spread-icons .image-app-widget-photos {
+  width: 178px;
+  height: 198px;
+  background-size: 178px 198px;
+  background-repeat: no-repeat;
+  background-image: url("./photos__epocvc49pswi_large.png");
+}
+
+.test__slide {
+  height: 100vh;
+  opacity: 0.5;
+  position: relative;
 }
