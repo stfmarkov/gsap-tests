@@ -541,6 +541,32 @@ body {
   width: 100%;
   position: relative;
 }
+.test-text:before {
+  content: '';
+  width: 30%;
+  height: 250px;
+  background: #ffcc57;
+  transform: skewY(30deg);
+  position: absolute;
+  top: 45%;
+  left: 0;
+  z-index: -1;
+}
+.logo-sign {
+  max-width: 150px;
+  margin-bottom: 40px;
+}
+.test-text:after {
+  content: '';
+  width: 20%;
+  height: 250px;
+  border: 2px solid #ffcc57;
+  transform: skewY(30deg);
+  position: absolute;
+  top: 25%;
+  right: 0;
+  z-index: -1;
+}
 .test-text .first-screen {
   display: flex;
   justify-content: center;
@@ -551,7 +577,8 @@ body {
   width: 300px;
   height: 500px;
   border-radius: 20px;
-  background: #8198ff;
+  background: #fff;
+  box-shadow: 0 0 100px -10px rgba(15, 9, 49, 0.11);
 }
 .test-text .center {
   font-size: 60px;
@@ -649,6 +676,15 @@ nav h2 {
   line-height: 1em;
   text-align: center;
   font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.blend h1 span {
+  font-size: 10px;
+  text-align: center;
+  font-weight: 500;
 }
 .blend h1 > div {
   position: relative;
@@ -695,7 +731,7 @@ nav h2 {
   left: 0;
 }
 .colored-section {
-  background: #fdf0e5;
+  background: #fff2f2;
   width: 100%;
   height: 100vh;
   display: flex;
