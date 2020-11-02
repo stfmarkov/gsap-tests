@@ -554,6 +554,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transform-origin: 50% 50% !important;
   /*color: #2128bd;*/
 }
 nav {
@@ -784,8 +785,10 @@ body {
   position: absolute;
   left: 200px;
   bottom: 300px;
-  background: rgb(176, 254, 246);
-  border-radius: 50%;
+  background: transparent;
+  border-radius: 2px;
+  transform: rotate(30deg);
+  border: 5px solid rgb(176, 254, 246);
 }
 .dot5 {
   width: 50px;
@@ -793,8 +796,9 @@ body {
   position: absolute;
   right: 200px;
   bottom: 300px;
-  background: #ffcc57;
+  background: transparent;
   border-radius: 50%;
+  border: 10px solid #ffcc57;
 }
 .dot6 {
   width: 20px;
@@ -802,6 +806,8 @@ body {
   position: absolute;
   left: 700px;
   bottom: 600px;
-  background: rgba(254, 159, 95, 0.8);
-  border-radius: 50%;
+  background: transparent;
+  border-radius: 2px;
+  transform: rotate(30deg);
+  border: 5px solid rgba(254, 159, 95, 0.8);
 }
