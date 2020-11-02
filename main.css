@@ -629,21 +629,21 @@ nav h2 {
 .blend {
   max-width: 1400px;
   margin: 0 auto;
-  color: #000;
-  background: #fff;
-  mix-blend-mode: screen;
+  color: #2228bd;
+  /*background: #fff;*/
+  /*mix-blend-mode: screen;*/
   z-index: 1;
 }
-.blend:before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: -6px;
-  right: -6px;
-  bottom: -52px;
-  z-index: -1;
-  background: #fff;
-}
+/*.blend:before {*/
+/*  content: "";*/
+/*  position: absolute;*/
+/*  top: -12px;*/
+/*  left: -6px;*/
+/*  right: -6px;*/
+/*  bottom: -52px;*/
+/*  z-index: -1;*/
+/*  background: #fff;*/
+/*}*/
 .blend h1 {
   font-size: 30px;
   line-height: 1em;

@@ -1,6 +1,6 @@
 function init5GSection() {
 
-  const animationLength = 5500; // Set the time to complete the animation
+  const animationLength = 2500; // Set the time to complete the animation
 
   // pin the section
   ScrollTrigger.create({
@@ -16,28 +16,35 @@ function init5GSection() {
       start: "top 80%", // when the top of the trigger hits the top of the viewport
       end: `+=${animationLength}px`,
       scrub: true,
+      pinspacer: false,
     },
   });
 
   tl_v
       .addLabel("start")
       .from(".center", {
-        scaleX: 4.5,
-        scaleY: 4.5,
-        duration: 5,
-      })
+        scaleX: 3.7,
+        scaleY: 3.7,
+        duration: 1,
+      },
+          "start"
+      )
       .from(".left", {
         scaleX: 4.5,
         scaleY: 4.5,
-        translateX: "-120%",
-        duration: 5,
-      })
+        x: "-1700px",
+            duration: 1,
+      },
+          "start+=0.05"
+          )
       .from(".right", {
         scaleX: 4.5,
         scaleY: 4.5,
-        translateX: "120%",
-        duration: 5,
-      })
+        x: "1700px",
+            duration: 1,
+      },
+          "start+=0.05"
+          )
 
   
 
