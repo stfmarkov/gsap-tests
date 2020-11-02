@@ -1,14 +1,15 @@
 function init5GSection() {
 
-  gsap.to(
+  gsap.fromTo(
       ".test-text",
       {
-        scaleY: 0.5,
-        scaleX: 0.5,
+        translateY: 0,
+      },
+      {
+        translateY: 170,
         scrollTrigger: {
           trigger: ".phone",
           scrub: true,
-          pin: true,
           start: "top 80%",
           ease: Power4.easeOut,
         },
