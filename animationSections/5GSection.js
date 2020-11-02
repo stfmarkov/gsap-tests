@@ -1,5 +1,7 @@
 function init5GSection() {
 
+  
+
   gsap.fromTo(
       ".test-text",
       {
