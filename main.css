@@ -541,7 +541,7 @@ body {
   width: 100%;
   position: relative;
 }
-.test-text {
+.test-text .first-screen {
   display: flex;
   justify-content: center;
   align-items: center;

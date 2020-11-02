@@ -1,5 +1,44 @@
 function init5GSection() {
 
+  const animationLength = 5500; // Set the time to complete the animation
+
+  // pin the section
+  ScrollTrigger.create({
+    trigger: ".test-text",
+    start: "top top",
+    end: `+=${animationLength}px`,
+    pin: true,
+  });
+
+  let tl_v = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".first-screen",
+      start: "top 80%", // when the top of the trigger hits the top of the viewport
+      end: `+=${animationLength}px`,
+      scrub: true,
+    },
+  });
+
+  tl_v
+      .addLabel("start")
+      .from(".center", {
+        scaleX: 4.5,
+        scaleY: 4.5,
+        duration: 5,
+      })
+      .from(".left", {
+        scaleX: 4.5,
+        scaleY: 4.5,
+        translateX: "-120%",
+        duration: 5,
+      })
+      .from(".right", {
+        scaleX: 4.5,
+        scaleY: 4.5,
+        translateX: "120%",
+        duration: 5,
+      })
+
   
 
   gsap.fromTo(
