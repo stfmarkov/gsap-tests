@@ -3,7 +3,7 @@ function phoneLockup() {
     scrollTrigger: {
       trigger: ".spread-icons",
       pin: ".spread-icons", // pin the trigger element while active
-      //   start: "top 0", // when the top of the trigger hits the top of the viewport
+      start: "top top", // when the top of the trigger hits the top of the viewport
       end: "+=3500px",
       scrub: true,
     },

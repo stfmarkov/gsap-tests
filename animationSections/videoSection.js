@@ -1,24 +1,22 @@
 function initVideoSection() {
-  const slides = gsap.utils.toArray(".player__slide");
-  const positionModif = 100 / slides.length;
-  slides.forEach((slide, i) => {
-    slide.style.top = -i * positionModif + "%";
-    //   ScrollTrigger.create({
-    //     trigger: panel,
-    //     start: "top top",
-    //     pin: ".test",
-    //     pinSpacing: false,
-    //   });
+  const animationLength = 8500; // Set the time to complete the animation
+
+  // pin the section
+  ScrollTrigger.create({
+    trigger: ".player__slides",
+    start: "top top",
+    end: `+=${animationLength}px`,
+    pin: true,
   });
 
   let tl_v = gsap.timeline({
     scrollTrigger: {
-      trigger: ".player__slides",
-      pin: true, // pin the trigger element while active
+      trigger: ".player-wrapper",
       start: "top top", // when the top of the trigger hits the top of the viewport
-      end: "+=4500px",
+      end: `+=${animationLength}px`,
       scrub: true,
       onUpdate: videoAnimationUpdated,
+      pinSpacing: false,
     },
   });
 
@@ -69,8 +67,8 @@ function initVideoSection() {
     )
     .addLabel("revealVideo")
     .to(".player-wrapper", {
-      scaleX: 0.43,
-      scaleY: 0.43,
+      scaleX: 0.25,
+      scaleY: 0.25,
       duration: 10,
     })
 
@@ -92,7 +90,7 @@ function initVideoSection() {
     )
     .addLabel("playerExit", "+=1.5")
     .to(".player-wrapper", {
-      y: "-=200%",
+      y: "-=80%",
       duration: 10,
     })
     .from(
@@ -102,6 +100,14 @@ function initVideoSection() {
         duration: 2,
       },
       "playerExit"
+    )
+    .to(
+      ".player__footer",
+      {
+        y: -150,
+        duration: 5,
+      },
+      "playerExit+=6"
     )
     .from(
       ".player__footer .subsection-intro, .player__footer .innovation-callout",
