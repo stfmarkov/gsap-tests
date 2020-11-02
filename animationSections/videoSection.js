@@ -11,6 +11,20 @@ function initVideoSection() {
     //   });
   });
 
+    var tl = gsap.timeline(),
+        mySplitText = new SplitText("h1", {type:"words,chars"}),
+        chars = mySplitText.chars; //an array of all the divs that wrap each character
+    tl.from(chars, {duration: 0.4, opacity:0, skewX: 70, skewY: 50, x: 80, y:80, transformOrigin:"0% 50% -50",  ease:"back", stagger: 0.05}, "+=0");
+
+    // var tl = gsap.timeline(),
+    //     mySplitText = new SplitText("h1", {type:"words,chars"}),
+    //     words = mySplitText.words; //an array of all the divs that wrap each character
+    // tl.from(words, {duration: 0.5, opacity:0, y:50, transformOrigin:"top left",  ease:"easeIn", stagger: 0.07}, "+=0");
+
+
+    window.addEventListener("resize", resize);
+    resize();
+
   let tl_v = gsap.timeline({
     scrollTrigger: {
       trigger: ".player__slides",
@@ -120,6 +134,7 @@ function initVideoSection() {
       },
       "playerExit"
     );
+
 
   const video = document.querySelector(".player-wrapper__player");
   video.loop = true;

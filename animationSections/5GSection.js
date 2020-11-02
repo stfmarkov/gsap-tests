@@ -1,4 +1,73 @@
 function init5GSection() {
+
+  gsap.fromTo(
+      ".test-text",
+      {
+        translateY: 0,
+      },
+      {
+        translateY: 170,
+        scrollTrigger: {
+          trigger: ".phone",
+          scrub: true,
+          start: "top 80%",
+          ease: Power4.easeOut,
+        },
+      }
+  )
+
+  gsap.fromTo(
+      ".move-text",
+      {
+        translateX: 0,
+      },
+      {
+        translateX: -550,
+        scrollTrigger: {
+          trigger: ".move-text",
+          scrub: true,
+          start: "top 90%",
+          end: "top -50%",
+          ease: Power4.easeOut,
+        },
+      }
+  );
+
+  gsap.fromTo(
+      ".phone",
+      {
+        translateY: 70,
+      },
+      {
+        translateY: -150,
+        scrollTrigger: {
+          trigger: ".phone",
+          scrub: true,
+          start: "top 80%",
+          ease: Power4.easeOut,
+        },
+      }
+  );
+
+  gsap.fromTo(
+      ".back",
+      {
+        rotate: 0
+      },
+      {
+        rotate: -25,
+        scrollTrigger: {
+          trigger: ".phone",
+          scrub: true,
+          start: "top 50%",
+          end: "top 10%",
+          ease: Power4.easeOut,
+        },
+      }
+  );
+
+
+
   gsap.fromTo(
     ".shade",
     {
@@ -29,6 +98,7 @@ function init5GSection() {
       },
     }
   );
+
 
   const items = gsap.utils.toArray(".download");
 
