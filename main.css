@@ -347,6 +347,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 980px;
+  height: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -357,7 +358,7 @@ body {
 .spread-icons {
   background: #fff;
   height: 100vh;
-  padding-top: 152px;
+  overflow: hidden;
 }
 
 .spread-icons .image-side-phone-left {
@@ -380,6 +381,7 @@ body {
 
 .center-phone {
   text-align: center;
+  z-index: 1;
 }
 
 .side-phone-right {
@@ -528,8 +530,160 @@ body {
   background-image: url("./photos__epocvc49pswi_large.png");
 }
 
+.spread-icons .image-app-chiclet-mail {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./mail__b6svc7vg3qqa_large.png");
+}
+
+.spread-icons .image-app-chiclet-files {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./files__bhil8baqqzgy_large.png");
+}
+
+.spread-icons .image-app-chiclet-appstore {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./appstore__garf9gmpdram_large.png");
+}
+
+.spread-icons .image-app-chiclet-weather {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./weather__bmgpdqv01biu_large.png");
+}
+
+.spread-icons .image-app-chiclet-health {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./health__fsesu5xvsvqu_large.png");
+}
+
+.spread-icons .image-app-chiclet-home {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./home__bnegc0h7tryq_large.png");
+}
+
+.spread-icons .image-app-chiclet-news {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./news__etnu2ocreuc2_large.png");
+}
+
+.spread-icons .image-app-chiclet-photos {
+  width: 68px;
+  height: 90px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./photos__epocvc49pswi_large1.png");
+}
+
+.spread-icons .image-app-widget-music {
+  width: 178px;
+  height: 198px;
+  background-size: 68px 90px;
+  background-repeat: no-repeat;
+  background-image: url("./music__f4xl0wbehwey_large.png");
+}
+
+.spread-icons .image-dock {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+
+  width: 206px;
+  height: 83px;
+  background-size: 206px 83px;
+  background-repeat: no-repeat;
+  background-image: url("./dock__c2ezitvt0lci_large.png");
+}
+
 .test__slide {
   height: 100vh;
   opacity: 0.5;
   position: relative;
+}
+
+.spread-icons .section-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+  text-align: center;
+}
+
+.spread-icons .icon-eyebrow-wrapper {
+  position: relative;
+}
+
+.spread-icons .icon-eyebrow-wrapper {
+  position: relative;
+}
+
+.spread-icons .icon-eyebrow-wrapper h2 {
+  position: absolute;
+  width: 97px;
+  height: 97px;
+  background-size: 97px 97px;
+  background-repeat: no-repeat;
+  background-image: url("./icon__dsa21udnvp2e_large.png");
+  position: relative;
+  left: 50%;
+  margin-left: -48.5px;
+  color: #fff;
+}
+
+.spread-icons .typography-section-intro-reduced {
+  margin-top: 30px;
+  color: #f5f5f7;
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+
+.spread-icons .typography-section-headline-elevated-alt-2 {
+  font-size: 80px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  color: #f5f5f7;
+  margin-top: 19px;
+}
+
+/* On progress */
+.chiclet {
+  opacity: 0;
+}
+
+.widget {
+  opacity: 0;
 }
