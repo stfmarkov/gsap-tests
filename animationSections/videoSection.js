@@ -11,10 +11,10 @@ function initVideoSection() {
   //   //   });
   // });
 
-    var tl = gsap.timeline(),
-        mySplitText = new SplitText("h1", {type:"words,chars"}),
-        chars = mySplitText.chars; //an array of all the divs that wrap each character
-    tl.from(chars, {duration: 0.4, opacity:0, skewX: 70, skewY: 50, x: 80, y:80, transformOrigin:"0% 50% -50",  ease:"back", stagger: 0.05}, "+=0");
+    // var tl = gsap.timeline(),
+    //     mySplitText = new SplitText(".change-text", {type:"words,chars"}),
+    //     chars = mySplitText.chars; //an array of all the divs that wrap each character
+    // tl.from(chars, {duration: 0.2, opacity:0, skewX: 70, skewY: 50, x: 80, y:80, transformOrigin:"0% 50% -50",  ease:"back", stagger: 0.05}, "+=0");
 
     // var tl = gsap.timeline(),
     //     mySplitText = new SplitText("h1", {type:"words,chars"}),
