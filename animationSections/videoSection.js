@@ -17,7 +17,6 @@ function initVideoSection() {
       scrub: true,
       onUpdate: videoAnimationUpdated,
       pinSpacing: false,
-      //   markers: true,
     },
   });
 
