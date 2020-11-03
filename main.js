@@ -1,8 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", function () {
-  phoneLockup();
   initCursor();
+  initHeader();
   init5GSection();
   initVideoSection();
+  phoneLockup();
 });

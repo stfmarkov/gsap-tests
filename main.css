@@ -11,10 +11,10 @@ body {
 
 .section-5g {
   overflow: hidden;
-  margin-top: 1425px;
   background: #000;
   text-align: center;
   min-height: 100vh;
+  padding-top: 150px;
   padding-bottom: 500px;
 }
 .section-5g__heading {
@@ -634,6 +634,7 @@ body {
   margin-right: auto;
   width: 980px;
   text-align: center;
+  pointer-events: none;
 }
 
 .spread-icons .icon-eyebrow-wrapper {
@@ -679,11 +680,42 @@ body {
   margin-top: 19px;
 }
 
-/* On progress */
-.chiclet {
-  opacity: 0;
+.header {
+  height: 100vh;
+  background: #fff;
+  font-family: sans-serif;
 }
 
-.widget {
-  opacity: 0;
+.header__container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  align-items: center;
+}
+
+.header__container > div {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.header__block_one {
+  margin-bottom: -50%;
+}
+.header__block_two {
+  margin-top: -50%;
+}
+
+.header h1 {
+  color: #54575a;
+  font-size: 71px;
+  font-weight: 700;
+  line-height: 71px;
+}
+
+.header p {
+  color: #6e7272;
+  font-size: 28px;
+  width: 380px;
+  margin: 32px 0;
 }

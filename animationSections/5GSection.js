@@ -52,7 +52,7 @@ function init5GSection() {
         item,
         {
           translateY: 0,
-          duration: 1,
+          duration: 0.8,
         },
         "start+=.5"
       )
