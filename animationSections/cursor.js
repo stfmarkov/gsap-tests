@@ -2,7 +2,7 @@ function initCursor() {
 
 
     TweenMax.fromTo(".dot1", 5, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot2", 8, {y:1100}, {y:-700, ease:Linear.easeNone, repeat:-1});
+    TweenMax.fromTo(".dot2", 8, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(".dot3", 4, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(".dot4", 7, {y:1100}, {y:-700, ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(".dot5", 4, {y:1100}, {y:-700, ease:Linear.easeNone, repeat:-1});

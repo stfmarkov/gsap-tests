@@ -1,12 +1,13 @@
 function init5GSection() {
 
-  const animationLength = 1700; // Set the time to complete the animation
+  // const animationLength = 1700; // Set the time to complete the animation
 
   // pin the section
   ScrollTrigger.create({
     trigger: ".test-text",
     start: "top top",// when the top of the trigger hits the top of the viewport
-    end: `+=${animationLength}px`,
+    // end: `+=${animationLength}px`,
+    end: "1200px",
     pin: true,
   });
 
@@ -35,7 +36,7 @@ function init5GSection() {
         x: "-1700px",
             duration: 1,
       },
-          "start+=0.05"
+          "start+=0.25"
           )
       .addLabel("right")
       .from(".right", {
@@ -44,14 +45,15 @@ function init5GSection() {
         x: "1700px",
             duration: 1,
       },
-          "start+=0.05"
+          "start+=0.25"
           )
       .from(".logo-sign", {
               opacity: 0,
               scaleX: 1.5,
               scaleY: 1.5,
-              duration: 1,
-          }
+              duration: 0.2,
+          },
+          "start+=0.7"
       )
 
 
