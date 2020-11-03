@@ -1,4 +1,7 @@
 function init5GSection() {
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    };
 
   // const animationLength = 1700; // Set the time to complete the animation
 
@@ -7,12 +10,13 @@ function init5GSection() {
     trigger: ".test-text",
     start: "top top",// when the top of the trigger hits the top of the viewport
     // end: `+=${animationLength}px`,
-    end: "1200px",
+    end: "1100px",
     pin: true,
+      markers: true,
   });
 
   let tl_v = gsap.timeline({
-    scrollTrigger: {
+      scrollTrigger: {
       trigger: ".first-screen",
       start: "top top",
       scrub: true,
@@ -22,39 +26,15 @@ function init5GSection() {
 
   tl_v
       .addLabel("start")
-      .from(".center", {
-        scaleX: 3.7,
-        scaleY: 3.7,
-          y: "-350px",
-        duration: 1,
-      },
-          "start"
-      )
-      .from(".left", {
-        scaleX: 4.5,
-        scaleY: 4.5,
-        x: "-1700px",
-            duration: 1,
-      },
-          "start+=0.25"
-          )
+      .from(".center", {scaleX: 3.7, scaleY: 3.7, y: "-350px", duration: 1,}, "start")
+      .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
+
       .addLabel("right")
-      .from(".right", {
-        scaleX: 4.5,
-        scaleY: 4.5,
-        x: "1700px",
-            duration: 1,
-      },
-          "start+=0.25"
-          )
-      .from(".logo-sign", {
-              opacity: 0,
-              scaleX: 1.5,
-              scaleY: 1.5,
-              duration: 0.2,
-          },
-          "start+=0.7"
-      )
+      .from(".right", {scaleX: 4.5, scaleY: 4.5, x: "1700px", duration: 1,}, "start+=0.25")
+      .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.7")
+
+       gsap.fromTo(".move-text", {translateX: 0,},
+           {translateX: -550, scrollTrigger: {trigger: ".move-text", scrub: true, start: "top 90%", end: "top -50%", ease: Power4.easeOut,},}, "start-=2");
 
 
 
@@ -73,24 +53,6 @@ function init5GSection() {
   //       },
   //     }
   // )
-
-  gsap.fromTo(
-      ".move-text",
-      {
-        translateX: 0,
-      },
-      {
-        translateX: -550,
-        scrollTrigger: {
-          trigger: ".move-text",
-          scrub: true,
-          start: "top 90%",
-          end: "top -50%",
-          ease: Power4.easeOut,
-        },
-      },
-      "start-=2"
-  );
 
   // gsap.fromTo(
   //     ".phone",
