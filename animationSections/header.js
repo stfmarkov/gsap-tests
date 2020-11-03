@@ -15,7 +15,7 @@ function initHeader() {
       start: "top top", // when the top of the trigger hits the top of the viewport
       end: `+=${animationLength}px`,
       scrub: true,
-      onUpdate: videoAnimationUpdated,
+      onUpdate: videoSetTime,
     },
   });
 
@@ -81,6 +81,42 @@ function initHeader() {
         duration: 0.75,
       },
       "scaled+=0.65"
+    )
+    .from(
+      ".DepositInsightsBox",
+      {
+        opacity: 0,
+        y: 20,
+        duration: 0.25,
+      },
+      "scaled+=1.2"
+    )
+    .from(
+      ".Advisors__advisor:nth-of-type(1) .Advisors__image",
+      {
+        y: 50,
+        scale: 0.68,
+        opacity: 0,
+      },
+      "scaled+=1.25"
+    )
+    .from(
+      ".Advisors__advisor:nth-of-type(2) .Advisors__image",
+      {
+        y: 50,
+        scale: 0.73,
+        opacity: 0,
+      },
+      "scaled+=1.35"
+    )
+    .from(
+      ".Advisors__advisor:nth-of-type(3) .Advisors__image",
+      {
+        y: 50,
+        scale: 0.7,
+        opacity: 0,
+      },
+      "scaled+=1.45"
     );
 
   const video = document.querySelector(".header video");
@@ -88,6 +124,17 @@ function initHeader() {
   video.muted = true; // without this line it's not working although I have "muted" in HTML
 
   let isRuning = false;
+
+  let currentTime;
+
+  function videoSetTime(event) {
+    currentTime = (video.duration * event.progress) / 2;
+  }
+
+  setInterval(() => {
+    video.currentTime = currentTime;
+  }, 33.33);
+
   function videoAnimationUpdated(event) {
     console.log(event.progress);
     if (!isRuning && event.progress > 0) {
