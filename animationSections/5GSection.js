@@ -10,7 +10,7 @@ function init5GSection() {
     trigger: ".test-text",
     start: "top top",// when the top of the trigger hits the top of the viewport
     // end: `+=${animationLength}px`,
-    end: "1100px",
+    end: "1200px",
     pin: true,
   });
 
@@ -19,32 +19,54 @@ function init5GSection() {
       trigger: ".first-screen",
       start: "top top",
       scrub: true,
-      pinspacer: false,
     },
   });
 
   tl_v
       .addLabel("start")
-      .from(".center", {scaleX: 3.7, scaleY: 3.7, duration: 1,}, "start")
-      .to(".change-text", {opacity: 0, duration: 0.05,}, "start+=0.7")
+      .from(".center", {scaleX: 3.1, scaleY: 3.1, duration: 1,}, "start")
+      .to(".change-text", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".text-two", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
       .from(".left h3", { opacity: 0, duration: 0.2,}, "start+=1")
-      .from(".left .over", {y: "30px", opacity: 0, duration: 0.2,}, "start+=1.2")
+      .from(".left .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
 
       .addLabel("right")
       .from(".right", {scaleX: 4.5, scaleY: 4.5, x: "1700px", duration: 1,}, "start+=0.25")
       .from(".right h3", {opacity: 0, duration: 0.2,}, "start+=1")
-      .from(".right .over", {y: "30px", opacity: 0, duration: 0.2,}, "start+=1.4")
-      .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.7")
+      .from(".right .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
+      .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
 
-       gsap.fromTo(".move-text", {translateX: 0,},
-           {translateX: -550, scrollTrigger: {trigger: ".move-text", scrub: true, start: "top 90%", end: "top -50%", ease: Power4.easeOut,},}, "start-=2");
+
+    gsap.fromTo(".move-text", {translateX: 0,},
+        {translateX: -550, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", end: "top -50%", ease: Power4.easeOut,},}, "start-=2");
+
+
+
+    let tl_card = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".colored-section",
+            start: "top top",
+            end: "+=4000px",
+            scrub: true,
+            pin: true,
+        },
+    });
+
+    tl_card
+        .addLabel("cards")
+        .from(".card.three", {translateY: 1000, duration: 1, ease: Power1.ease,})
+        .to(".card.three", {translateY: -1000, duration: 1, ease: Power1.ease,})
+        .from(".card.one", {translateY: 1000, duration: 1, ease: Power1.ease,}, "cards+=1")
+        .to(".card.one", {translateY: -1000, duration: 1, ease: Power1.ease,})
+        .from(".card.two", {translateY: 1000, duration: 1, ease: Power1.ease,}, "cards+=2")
+        .to(".card.two", {translateY: -1000, duration: 1, ease: Power1.ease,})
+
 
 
     let proxy = { skew: 0 },
         skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
-        clamp = gsap.utils.clamp(-3, 3); // don't let the skew go beyond 20 degrees.
+        clamp = gsap.utils.clamp(-2, 2); // don't let the skew go beyond 20 degrees.
 
     ScrollTrigger.create({
         onUpdate: (self) => {

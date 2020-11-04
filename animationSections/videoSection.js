@@ -16,14 +16,50 @@ function initVideoSection() {
     //     chars = mySplitText.chars; //an array of all the divs that wrap each character
     // tl.from(chars, {duration: 0.2, opacity:0, skewX: 70, skewY: 50, x: 80, y:80, transformOrigin:"0% 50% -50",  ease:"back", stagger: 0.05}, "+=0");
 
-    // var tl = gsap.timeline(),
-    //     mySplitText = new SplitText("h1", {type:"words,chars"}),
-    //     words = mySplitText.words; //an array of all the divs that wrap each character
-    // tl.from(words, {duration: 0.5, opacity:0, y:50, transformOrigin:"top left",  ease:"easeIn", stagger: 0.07}, "+=0");
+    var tl = gsap.timeline(),
+        mySplitText = new SplitText(".change-text", {type:"words,chars"}),
+        words = mySplitText.chars; //an array of all the divs that wrap each character
+    tl.from(words, {duration: 0.5, opacity:0, y:25, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "+=0");
+
+    var tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".text-two",
+            start: "bottom 50%",
+        }
+    });
+
+    mySplitText = new SplitText(".text-two", {type:"words,chars"}),
+        words = mySplitText.chars;
+    tl2.from(words, {duration: 0.2, opacity:0, y:5, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "-=0.5");
+
+    // var tl3 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".text-two",
+    //         start: "top top",
+    //         scrub: true,
+    //     }
+    // });
+    //
+    // mySplitText = new SplitText(".left h3", {type:"words,chars"}),
+    //     words = mySplitText.chars;
+    // tl3.from(words, {duration: 1.2, opacity:0, y:25, transformOrigin:"top left",  ease:"easeIn", stagger: 0.05}, "right+=1");
+    //
+    // var tl4 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".text-two",
+    //         start: "top top",
+    //         scrub: true,
+    //     }
+    // });
+    //
+    // mySplitText = new SplitText(".right h3", {type:"words,chars"}),
+    //     words = mySplitText.chars;
+    // tl4.from(words, {duration: 1.2, opacity:0, y:25, transformOrigin:"top left",  ease:"easeIn", stagger: 0.05}, "right+=2");
 
 
-    window.addEventListener("resize", resize);
-    resize();
+    // window.addEventListener("resize", resize);
+    // resize();
+
 
   // let tl_v = gsap.timeline({
   //   scrollTrigger: {

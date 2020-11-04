@@ -4,9 +4,11 @@ function initCursor() {
     TweenMax.fromTo(".dot1", 5, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(".dot2", 8, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(".dot3", 4, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot4", 7, {y:1100}, {y:-700, ease:Linear.easeNone, repeat:-1});
+    TweenMax.fromTo(".dot4", 7, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
     TweenMax.fromTo(".dot5", 4, {y:1100}, {y:-700, ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot6", 12, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
+    TweenMax.fromTo(".dot6", 12, {y:1100, rotate: "0deg"}, {y:-500, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
+    TweenMax.fromTo(".dot7", 12, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
+
 
 
   const hoverable = document.querySelectorAll("a, button");
@@ -31,7 +33,7 @@ function initCursor() {
     const { offsetX: x, offsetY: y } = e,
         { offsetWidth: width, offsetHeight: height } = this,
 
-        move = 40,
+        move = 30,
         xMove = x / width * (move * 2) - move,
         yMove = y / height * (move * 2) - move;
 
@@ -42,6 +44,7 @@ function initCursor() {
 
   overs.forEach(b => b.addEventListener('mousemove', animateit));
   overs.forEach(b => b.addEventListener('mouseleave', animateit));
+
 
   window.addEventListener("mousemove", (e) => {
     gsap.to(cur, 0, {
