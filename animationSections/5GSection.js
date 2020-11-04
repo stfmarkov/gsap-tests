@@ -47,7 +47,7 @@ function init5GSection() {
         scrollTrigger: {
             trigger: ".colored-section",
             start: "top top",
-            end: "+=4000px",
+            end: "+=3500px",
             scrub: true,
             pin: true,
         },
@@ -55,12 +55,12 @@ function init5GSection() {
 
     tl_card
         .addLabel("cards")
-        .from(".card.three", {translateY: 1000, duration: 1, ease: Power1.ease,})
-        .to(".card.three", {translateY: -1000, duration: 1, ease: Power1.ease,})
-        .from(".card.one", {translateY: 1000, duration: 1, ease: Power1.ease,}, "cards+=1")
-        .to(".card.one", {translateY: -1000, duration: 1, ease: Power1.ease,})
-        .from(".card.two", {translateY: 1000, duration: 1, ease: Power1.ease,}, "cards+=2")
-        .to(".card.two", {translateY: -1000, duration: 1, ease: Power1.ease,})
+        .from(".card.three", {translateY: 1000, duration: 1, ease: Power0.easeNone}, "cards")
+        .to(".card.three", {translateY: -1000, duration: 1, ease: Power0.easeNone})
+        .from(".card.one", {translateY: 1000, duration: 1, ease: Power0.easeNone}, "cards+=1")
+        .to(".card.one", {translateY: -1000, duration: 1, ease: Power0.easeNone})
+        .from(".card.two", {translateY: 1000, duration: 1, ease: Power0.easeNone}, "cards+=2")
+        .to(".card.two", {translateY: -1000, duration: 1, ease: Power0.easeNone})
 
 
 
