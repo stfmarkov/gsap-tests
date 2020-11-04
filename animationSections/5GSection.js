@@ -39,7 +39,7 @@ function init5GSection() {
 
 
     gsap.fromTo(".move-text", {translateX: 0,},
-        {translateX: -550, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", end: "top -50%", ease: Power4.easeOut,},}, "start-=2");
+        {translateX: -1700, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", end: "top -500%", ease: Power4.easeOut,},}, "start-=2");
 
 
 
@@ -47,7 +47,7 @@ function init5GSection() {
         scrollTrigger: {
             trigger: ".colored-section",
             start: "top top",
-            end: "+=3500px",
+            end: "+=3000px",
             scrub: true,
             pin: true,
         },
@@ -61,6 +61,8 @@ function init5GSection() {
         .to(".card.one", {translateY: -1000, duration: 1, ease: Power0.easeNone})
         .from(".card.two", {translateY: 1000, duration: 1, ease: Power0.easeNone}, "cards+=2")
         .to(".card.two", {translateY: -1000, duration: 1, ease: Power0.easeNone})
+        .from(".card.four", {translateY: 1000, duration: 1, ease: Power0.easeNone}, "cards+=3")
+        .to(".card.four", {translateY: -600, duration: 1, ease: Power0.easeNone})
 
 
 
