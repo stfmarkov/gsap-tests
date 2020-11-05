@@ -1,5 +1,9 @@
 function initVideoSection() {
   const animationLength = 8500; // Set the time to complete the animation
+  const video = document.querySelector(".player-wrapper__player");
+  video.loop = true;
+  video.muted = true; // without this line it's not working although I have "muted" in HTML
+  let isRuning = false;
 
   // pin the section
   ScrollTrigger.create({
@@ -127,11 +131,6 @@ function initVideoSection() {
       "playerExit"
     );
 
-  const video = document.querySelector(".player-wrapper__player");
-  video.loop = true;
-  video.muted = true; // without this line it's not working although I have "muted" in HTML
-
-  let isRuning = false;
   function videoAnimationUpdated(event) {
     if (!isRuning && event.progress > 0.01) {
       video.play();

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  </head>
+  <body data-barba="wrapper">
+    <nav>
+      <ul>
+        <li><a href="/index.html" data-next="home">home</a></li>
+        <li><a href="/test1.html" data-next="test1">test1</a></li>
+        <li><a href="/test2.html" data-next="test2">test2</a></li>
+      </ul>
+    </nav>
+
+    <main data-barba="container" data-barba-namespace="test2" class="test2">
+      <div class="overlay"></div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, dolor
+        fuga temporibus nisi quis est eum accusantium nemo voluptatem. Eos
+        necessitatibus temporibus aperiam neque fugit eligendi sed facilis
+        minima repellendus!
+      </p>
+    </main>
+
+    <!-- Real project will use imports -->
+    <script src="./animationSections/cursor.js"></script>
+    <script src="./animationSections/5GSection.js"></script>
+    <script src="./animationSections/videoSection.js"></script>
+    <script src="./animationSections/phoneLockup.js"></script>
+    <script src="./animationSections/header.js"></script>
+    <script src="pageTransitions.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
