@@ -613,17 +613,17 @@ body {
   right: auto;
   left: -70px;
 }
-.test-text:before {
-  content: '';
-  width: 30%;
-  height: 270px;
-  background: #ffce6c;
-  transform: skewY(25deg);
-  position: fixed;
-  top: 52%;
-  left: 0;
-  z-index: -1;
-}
+/*.test-text:before {*/
+/*  content: '';*/
+/*  width: 30%;*/
+/*  height: 270px;*/
+/*  background: #ffce6c;*/
+/*  transform: skewY(25deg);*/
+/*  position: fixed;*/
+/*  top: 52%;*/
+/*  left: 0;*/
+/*  z-index: -1;*/
+/*}*/
 .change-text {
   transform: translateY(-90px);
 }
@@ -648,17 +648,17 @@ body {
   max-width: 150px;
   margin-bottom: 40px;
 }
-.test-text:after {
-  content: '';
-  width: 17%;
-  height: 250px;
-  border: 2px solid #ffcc57;
-  transform: skewY(25deg);
-  position: fixed;
-  top: 25%;
-  right: -3px;
-  z-index: -1;
-}
+/*.test-text:after {*/
+/*  content: '';*/
+/*  width: 17%;*/
+/*  height: 250px;*/
+/*  border: 2px solid #ffcc57;*/
+/*  transform: skewY(25deg);*/
+/*  position: fixed;*/
+/*  top: 25%;*/
+/*  right: -3px;*/
+/*  z-index: -1;*/
+/*}*/
 .test-text .first-screen {
   display: flex;
   justify-content: center;
@@ -1115,4 +1115,61 @@ body {
 }
 .card.two {
   right: 15%;
+}
+.big-text .big-bg  {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+.big-text .big-bg .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(126, 128, 255, 0.4);
+}
+.big-text .big-bg .top-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  color: #fff;
+  font-weight: 700;
+}
+.big-text .big-bg .top-text span {
+  position: relative;
+  top: 898px;
+}
+.big-text .text-bg {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.big-text .text-bg .title {
+  font-size: 150px;
+  color: #382580;;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+.big-text .text-bg .subtext {
+  color: #382580;;
+  font-weight: 500;
+  font-size: 50px;
+  text-align: center;
+  max-width: 500px;
+  margin: 20px auto 0 auto;
 }

@@ -65,6 +65,23 @@ function init5GSection() {
         .to(".card.four", {translateY: -600, duration: 1, ease: Power0.easeNone})
 
 
+    let tl_title = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".big-text",
+            start: "top top",
+            end: "100%-=800px",
+            scrub: true,
+        },
+    });
+
+    tl_title
+        .addLabel("text-start")
+        .from(".top-text span", {y: "-898px", duration: 1,}, "text-start")
+        .to(".top-text span", {y: "0px", scale: 0.8, duration: 1,}, "text-start")
+        .from(".title", {y: "-898px", duration: 1,}, "text-start")
+        .to(".title", {y: "0px", scale: 0.8, duration: 1,}, "text-start")
+
+
 
     let proxy = { skew: 0 },
         skewSetter = gsap.quickSetter(".skewElem", "skewY", "deg"), // fast
