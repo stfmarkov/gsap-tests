@@ -20,6 +20,7 @@ function initVideoSection() {
         mySplitText = new SplitText(".change-text", {type:"words,chars"}),
         words = mySplitText.chars; //an array of all the divs that wrap each character
     tl.from(words, {duration: 0.5, opacity:0, y:25, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "+=0");
+    // tl.to(".change-text", {text: {value: "We'r different kind of morgage Leader."}, duration: 2.5, delay: 1, ease: "easeIn"}, "-=1")
 
     var tl2 = gsap.timeline({
         scrollTrigger: {
