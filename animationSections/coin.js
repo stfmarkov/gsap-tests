@@ -1,7 +1,7 @@
 function initHeader() {
   if (!document.querySelector(".coin")) return;
 
-  const animationLength = 2500;
+  const animationLength = 2000;
   // pin the section
   ScrollTrigger.create({
     trigger: ".coin",
