@@ -553,13 +553,13 @@ body {
 /*  right: 60px;*/
 /*  z-index: 1;*/
 .started {
-  color: #604ce6;
   padding: 13px 25px;
   border-radius: 100px;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  background: rgba(96, 76, 230, 0.16);
+  background: rgb(230 104 76 / 16%);
+  color: #e68c4c;
   margin-left: 30px;
   transition: all .3s ease 0s;
 }
@@ -570,7 +570,7 @@ body {
   border-radius: 20px;
   display: inline-block;
   margin-left: 10px;
-  background: #604ce6;
+  background: #e68c4c;
   transition: all .3s ease;
   opacity: 1;
 }
@@ -584,15 +584,18 @@ body {
   opacity: 0;
   background: #e68c4c;
 }
-.right-decoration {
-  width: 100px;
-  height: 50px;
-  background: #7a7efd;
-  transform: skewY(25deg);
-  position: fixed;
-  right: 100px;
-  top: 128px;
+nav img {
+  filter: sepia(1) brightness(0.9);
 }
+/*.right-decoration {*/
+/*  width: 100px;*/
+/*  height: 50px;*/
+/*  background: #7a7efd;*/
+/*  transform: skewY(25deg);*/
+/*  position: fixed;*/
+/*  right: 100px;*/
+/*  top: 128px;*/
+/*}*/
 .right-decoration.two {
   right: auto;
   left: 750px;
@@ -625,7 +628,7 @@ body {
 /*  z-index: -1;*/
 /*}*/
 .change-text {
-  transform: translateY(-90px);
+  transform: translateY(-180px);
 }
 .test-text {
   overflow: hidden;
@@ -645,8 +648,8 @@ body {
 
 }
 .logo-sign {
-  max-width: 150px;
-  margin-bottom: 40px;
+  max-width: 250px;
+  margin-bottom: 50px;
 }
 /*.test-text:after {*/
 /*  content: '';*/
@@ -701,24 +704,24 @@ body {
   margin-left: 10px;
 }
 .left a:after {
-  background: #4bc5ef;
+  background: #e68c4c;
 }
 .right a:after {
-  background: #604ce6;
+  background: #e68c4c;
 }
 .left a {
-  color: #68b9f3;
-  background: rgba(104, 185, 243, 0.21);
+  background: rgb(230 104 76 / 16%);
+  color: #e68c4c;
 }
 .right a {
-  color: #604ce6;
-  background: rgba(96, 76, 230, 0.16);
+  background: rgb(230 104 76 / 16%);
+  color: #e68c4c;
 }
 .left h3 {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  color: #68b9f3;
+  color: #4a453f;
   max-width: 230px;
   margin: 0 auto;
 }
@@ -726,7 +729,7 @@ body {
   font-size: 30px;
   font-weight: 700;
   text-align: center;
-  color: #604ce6;
+  color: #4a453f;
   max-width: 340px;
   margin: 0 auto;
 }
@@ -773,7 +776,7 @@ nav ul {
 /*  overflow: hidden;*/
 /*}*/
 nav ul li span {
-  color: #2228bd;
+  color: #4a453f;
   margin-left: 40px;
   font-weight: 600;
   padding: 20px 0;
@@ -806,12 +809,12 @@ nav ul li span {
 nav h2 {
   font-weight: 900;
   font-size: 30px;
-  color: #2228bd;
+  color: #4a453f;
 }
 .blend {
   max-width: 1400px;
   margin: 0 auto;
-  color: #2228bd;
+  color: #4a453f;
   /*background: #fff;*/
   /*mix-blend-mode: screen;*/
   z-index: 1;
