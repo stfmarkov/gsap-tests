@@ -1,4 +1,6 @@
 function initVideoSection() {
+  if (!document.querySelector(".player-wrapper")) return;
+
   const animationLength = 8500; // Set the time to complete the animation
   const video = document.querySelector(".player-wrapper__player");
   video.loop = true;

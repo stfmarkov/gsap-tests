@@ -817,7 +817,7 @@ body {
   position: relative;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .header {
     text-align: center;
     height: auto;
@@ -862,6 +862,15 @@ body {
   .header__screen {
     width: 100%;
     position: relative;
+
+    border-radius: 30px;
+    height: 626px;
+    width: 300px;
+    box-shadow: rgba(64, 62, 61, 0.15) 0px 5px 15px;
+
+    margin: 0 auto;
+    top: 0;
+    right: 0;
   }
 
   .header__screen svg {
@@ -915,6 +924,13 @@ nav ul {
   z-index: 1;
   transform: translate(-50%, -50%);
   border-radius: 50%;
+  pointer-events: none;
+}
+
+.overlay.large {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
 
 main {

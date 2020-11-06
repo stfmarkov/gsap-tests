@@ -1,4 +1,6 @@
 function init5GSection() {
+  if (!document.querySelector(".section-5g")) return;
+
   gsap.fromTo(
     ".shade",
     {

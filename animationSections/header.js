@@ -1,39 +1,16 @@
 function initHeader() {
-  const animationLength = 3500;
+  if (!document.querySelector(".header__container")) return;
+
   const video = document.querySelector(".header video");
   video.loop = true;
   video.muted = true; // without this line it's not working although I have "muted" in HTML
   let isRuning = false;
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".header__container",
-      //   pin: ".header", // pin the trigger element while active
-      start: "top top", // when the top of the trigger hits the top of the viewport
-      end: `+=${animationLength}px`,
-      scrub: true,
-      onUpdate: videoAnimationUpdated,
-    },
-  });
-
-  window.addEventListener("resize", () => {
-    ScrollTrigger.refresh();
-  });
-
   ScrollTrigger.matchMedia({
     // desktop
     "(min-width: 1200px)": function () {
-      // pin the section
-      ScrollTrigger.create({
-        trigger: ".header",
-        start: "top top",
-        end: `+=${animationLength}px`,
-        pin: true,
-      });
-    },
+      const animationLength = 3500;
 
-    // tablet
-    "(min-width: 993px)": function () {
       // pin the section
       ScrollTrigger.create({
         trigger: ".header",
@@ -42,6 +19,18 @@ function initHeader() {
         pin: true,
       });
 
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".header__container",
+          //   pin: ".header", // pin the trigger element while active
+          start: "top top", // when the top of the trigger hits the top of the viewport
+          end: `+=${animationLength}px`,
+          scrub: true,
+          onUpdate: videoAnimationUpdated,
+        },
+      });
+
+      tl.addLabel("start");
       tl.to(".header__block_one", {
         y: -500,
         opacity: 0,
@@ -57,43 +46,6 @@ function initHeader() {
         },
         "start+=0.5"
       );
-
-      tl.to(
-        ".header__screen",
-        {
-          boxShadow: "rgba(64, 62, 61, 0.15) 0px 5px 15px",
-          x: -150,
-          y: 0,
-          borderRadius: "30px",
-          height: 626,
-          width: 300,
-          duration: 1,
-        },
-        "start+=0.75"
-      );
-    },
-
-    // mobile
-    "(max-width: 992px)": function () {
-      tl.to(
-        ".header__screen",
-        {
-          boxShadow: "rgba(64, 62, 61, 0.15) 0px 5px 15px",
-          x: "-50%",
-          y: 0,
-          borderRadius: "30px",
-          height: 626,
-          width: 300,
-          duration: 1,
-          left: "50vh",
-        },
-        "start+=0.75"
-      );
-    },
-
-    // all
-    all: function () {
-      tl.addLabel("start");
       tl.to(
         ".header__screen",
         {
@@ -107,6 +59,7 @@ function initHeader() {
         },
         "start"
       );
+
       tl.addLabel("scaled");
       tl.to(
         ".header__screen video",
@@ -179,6 +132,27 @@ function initHeader() {
           "scaled+=1.45"
         );
     },
+
+    // mobile
+    "(max-width: 992px)": function () {
+      tl.to(
+        ".header__screen",
+        {
+          boxShadow: "rgba(64, 62, 61, 0.15) 0px 5px 15px",
+          x: "-50%",
+          y: 0,
+          borderRadius: "30px",
+          height: 626,
+          width: 300,
+          duration: 1,
+          left: "50vh",
+        },
+        "start+=0.75"
+      );
+    },
+
+    // all
+    all: function () {},
   });
 
   //   Moving the video with scrolling

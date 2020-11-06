@@ -1,4 +1,6 @@
 function phoneLockup() {
+  if (!document.querySelector(".spread-icons")) return;
+
   const animationLength = 3500;
   let tl = gsap.timeline({
     scrollTrigger: {
