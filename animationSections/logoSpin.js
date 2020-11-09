@@ -1,6 +1,7 @@
 function logoSpin() {
   if (!document.querySelector(".logo-spin")) return;
-  const animationLength = 8500;
+  const animationLength = 1800;
+  const animationLengthCoin = 5400;
 
   const video = document.querySelector(".logo-spin");
   video.loop = true;
@@ -25,21 +26,25 @@ function logoSpin() {
   ScrollTrigger.create({
     trigger: ".logo-spin-coin",
     start: "top top",
-    end: `+=${animationLength}px`,
+    end: `+=${animationLengthCoin}px`,
     pin: true,
     onUpdate: rotateCoin,
   });
 
   function rotate(event) {
     const progress = event.progress;
+    const scrollposs = (animationLength * progress) / 1000;
+
     if (progress <= 0) return;
-    current = video.duration * progress;
+    current += (scrollposs - current) * 0.1;
   }
 
   function rotateCoin(event) {
     const progress = event.progress;
+    const scrollposs = (animationLength * progress) / 1000;
+
     if (progress <= 0) return;
-    currentCoin = videoCoin.duration * progress;
+    currentCoin += (scrollposs - currentCoin) * 0.1;
   }
 
   setInterval(() => {
