@@ -1176,3 +1176,6 @@ body {
   max-width: 500px;
   margin: 20px auto 0 auto;
 }
+video {
+  max-width: 300px;
+}

@@ -24,7 +24,7 @@ function init5GSection() {
 
   tl_v
       .addLabel("start")
-      .from(".center", {scaleX: 3.1, scaleY: 3.1, duration: 1,}, "start")
+      .from(".center", {scaleX: 2.5, scaleY: 2.5, duration: 1,}, "start")
       .to(".change-text", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".text-two", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
