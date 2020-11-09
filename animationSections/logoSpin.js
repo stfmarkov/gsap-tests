@@ -1,6 +1,6 @@
 function logoSpin() {
   if (!document.querySelector(".logo-spin")) return;
-  const animationLength = 1800;
+  const animationLength = 3600;
   const animationLengthCoin = 5400;
 
   const video = document.querySelector(".logo-spin");
@@ -33,7 +33,7 @@ function logoSpin() {
 
   function rotate(event) {
     const progress = event.progress;
-    const scrollposs = (animationLength * progress) / 1000;
+    const scrollposs = ((animationLength / 2) * progress) / 1000;
 
     if (progress <= 0) return;
     current += (scrollposs - current) * 0.1;
