@@ -967,8 +967,9 @@ main {
   transform: translate(0, 0);
 }
 
-.logo-spin {
-  max-width: 800px;
+.logo-spin,
+.logo-spin-coin {
+  width: 800px;
   margin: 0 auto;
   display: block;
 }
