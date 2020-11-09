@@ -14,5 +14,6 @@ function initAnimations(params) {
   init5GSection();
   initVideoSection();
   phoneLockup();
-  initHeader();
+  initCoin();
+  logoSpin();
 }
