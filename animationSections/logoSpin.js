@@ -1,7 +1,7 @@
 function logoSpin() {
   if (!document.querySelector(".logo-spin")) return;
-  const animationLength = 3600;
-  const animationLengthCoin = 5400;
+  const animationLength = 3000;
+  const animationLengthCoin = 34000 * 1.5;
 
   const video = document.querySelector(".logo-spin");
   video.loop = true;
@@ -31,24 +31,52 @@ function logoSpin() {
     onUpdate: rotateCoin,
   });
 
+  //   function rotate(event) {
+  //     const progress = event.progress;
+  //     const scrollposs = (animationLength * progress) / 1000;
+
+  //     if (progress <= 0) return;
+  //     current += (scrollposs - current) * 0.1;
+  //   }
+
+  //   function rotateCoin(event) {
+  //     const progress = event.progress;
+  //     const scrollposs = (animationLength * progress) / 1000;
+
+  //     if (progress <= 0) return;
+  //     currentCoin += (scrollposs - currentCoin) * 0.1;
+  //   }
+
   function rotate(event) {
     const progress = event.progress;
-    const scrollposs = ((animationLength / 2) * progress) / 1000;
 
     if (progress <= 0) return;
-    current += (scrollposs - current) * 0.1;
+    const lenght = video.duration;
+    current = lenght * progress;
+    console.log(current);
   }
 
   function rotateCoin(event) {
     const progress = event.progress;
-    const scrollposs = (animationLength * progress) / 1000;
 
     if (progress <= 0) return;
-    currentCoin += (scrollposs - currentCoin) * 0.1;
+    const lenght = videoCoin.duration;
+    currentCoin = lenght * progress;
+    console.log(currentCoin);
   }
 
-  setInterval(() => {
-    video.currentTime = current || 0;
-    videoCoin.currentTime = currentCoin || 0;
-  }, 33.33);
+  //   function updatevideo() {
+  //     window.requestAnimationFrame(() => {
+  //       video.currentTime = current || 0;
+  //       videoCoin.currentTime = currentCoin || 0;
+  //       updatevideo();
+  //     });
+  //   }
+
+  //   updatevideo();
+
+  //   setInterval(() => {
+  //     video.currentTime = current || 0;
+  //     videoCoin.currentTime = currentCoin || 0;
+  //   }, 33.33);
 }

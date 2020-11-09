@@ -912,7 +912,7 @@ nav ul {
 }
 
 .test1 {
-  background: khaki;
+  background: #ccc;
   color: #000;
 }
 
@@ -965,6 +965,7 @@ main {
 
 .coin img {
   transform: translate(0, 0);
+  height: 100%;
 }
 
 .logo-spin,
