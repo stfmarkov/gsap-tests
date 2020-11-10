@@ -958,14 +958,14 @@ main {
 
 .coin {
   width: 383px;
-  height: 330px;
+  height: 416px;
   overflow: hidden;
   margin: 0 auto;
 }
 
 .coin img {
   transform: translate(0, 0);
-  height: 100%;
+  /* height: 100%; */
 }
 
 .logo-spin,
