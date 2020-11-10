@@ -1207,7 +1207,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background: black;
+  background: #8c989d;
 }
 
 .loader__done {
@@ -1220,14 +1220,31 @@ video {
   justify-content: center;
   position: relative;
   height: 100%;
-  background: burlywood;
+  background: #6b7b84;
+}
+.overlay {
+  height: 100%;
+  background: #8c989d;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+.last {
+  height: 100%;
+  background: #e8e9e8;
+  display: block;
+  position: absolute;
+  width: 100%;
 }
 
 .loader svg,
 .loader img {
   width: 30%;
+  max-width: 170px;
 }
-
+.st0 {
+  stroke-width: 6px !important;
+}
 .loader img {
   position: absolute;
   top: 50%;

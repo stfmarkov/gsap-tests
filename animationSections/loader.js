@@ -1,17 +1,16 @@
 function initLoader() {
-  if (!document.querySelector(".loader")) return;
+  // if (!document.querySelector(".loader")) return;
 
   let tl = gsap.timeline({ totalDuration: 20 });
 
   tl.addLabel("start")
-
     .to(
       ".loader__wrapper img",
       {
         opacity: 1,
         duration: 1,
       },
-      "start+=2.25"
+      "start+=2.35"
     )
     .to(
       ".loader .shape1",
@@ -34,19 +33,37 @@ function initLoader() {
     .addLabel("exit")
     .to(".loader__wrapper", {
       y: "-100%",
-      duration: 0.5,
-      ease: Circ.easeOut,
+      duration: 0.7,
+        ease: Power4.easeIn,
     })
     .to(
       ".loader__base",
       {
         y: "-100%",
-        duration: 0.3,
-        ease: Circ.easeOut,
+        duration: 0.7,
+          ease: Power4.easeIn,
       },
-      "exit+=0.25"
+      "exit+=0.13"
     )
-    .call(() => {
-      document.querySelector(".loader").classList.add("loader__done");
-    });
+      .to(
+          ".overlay",
+          {
+              y: "-100%",
+              duration: 0.7,
+              ease: Power4.easeIn,
+          },
+          "exit+=0.26"
+      )
+      .to(
+          ".last",
+          {
+              y: "-100%",
+              duration: 0.7,
+              ease: Power4.easeIn,
+          },
+          "exit+=0.39"
+      )
+    // .call(() => {
+    //   document.querySelector(".loader").classList.add("loader__done");
+    // });
 }
