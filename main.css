@@ -1180,3 +1180,79 @@ body {
 video {
   max-width: 400px;
 }
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.loader__base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #323b44;
+}
+
+.loader__done {
+  pointer-events: none;
+}
+
+.loader__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  background: #14171b;
+}
+.overlay {
+  height: 100%;
+  background: #4c5863;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+.last {
+  height: 100%;
+  background: #636f7a;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+.loader svg,
+.loader img {
+  width: 30%;
+  max-width: 150px;
+}
+.loader img {
+  filter: drop-shadow(0px 0px 36px rgba(255,255,255,0.2));
+}
+.st0 {
+  stroke-width: 7px !important;
+}
+.loader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+.loader .shape0 {
+  stroke-dasharray: 2451px;
+  stroke-dashoffset: 2451px;
+  /* stroke-dashoffset: 0; */
+}
+
+.loader .shape1 {
+  stroke-dasharray: 3176px;
+  stroke-dashoffset: 3176px;
+  /* stroke-dashoffset: 0; */
+}
