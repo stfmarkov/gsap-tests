@@ -8,16 +8,18 @@ function initLoader() {
       ".loader__wrapper img",
       {
         opacity: 1,
-        duration: 1,
+        duration: 0.7,
+          ease: Power2.easeIn,
       },
-      "start+=2.35"
+      "start+=1.25"
     )
     .to(
       ".loader .shape1",
       {
         // opacity: 0,
         strokeDashoffset: 0,
-        duration: 2,
+        duration: 1.5,
+          ease: Power2.easeIn,
       },
       "start"
     )
@@ -26,9 +28,10 @@ function initLoader() {
       {
         //   opacity: 0,
         strokeDashoffset: 0,
-        duration: 2,
+        duration: 1.3,
+          ease: Power2.easeIn,
       },
-      "start+=0.75"
+      "start+=0.15"
     )
     .addLabel("exit")
     .to(".loader__wrapper", {

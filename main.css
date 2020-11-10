@@ -1207,7 +1207,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #8c989d;
+  background: #323b44;
 }
 
 .loader__done {
@@ -1220,18 +1220,18 @@ video {
   justify-content: center;
   position: relative;
   height: 100%;
-  background: #6b7b84;
+  background: #14171b;
 }
 .overlay {
   height: 100%;
-  background: #8c989d;
+  background: #4c5863;
   display: block;
   position: absolute;
   width: 100%;
 }
 .last {
   height: 100%;
-  background: #e8e9e8;
+  background: #636f7a;
   display: block;
   position: absolute;
   width: 100%;
@@ -1240,10 +1240,13 @@ video {
 .loader svg,
 .loader img {
   width: 30%;
-  max-width: 170px;
+  max-width: 150px;
+}
+.loader img {
+  filter: drop-shadow(0px 0px 36px rgba(255,255,255,0.2));
 }
 .st0 {
-  stroke-width: 6px !important;
+  stroke-width: 7px !important;
 }
 .loader img {
   position: absolute;
