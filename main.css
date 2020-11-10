@@ -1198,7 +1198,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 3;
+  z-index: 3000;
 }
 
 .loader__base {
@@ -1207,7 +1207,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #323b44;
+  background: #d6c2be;
 }
 
 .loader__done {
@@ -1220,18 +1220,18 @@ video {
   justify-content: center;
   position: relative;
   height: 100%;
-  background: #14171b;
+  background: #e6d1cc;
 }
 .overlay {
   height: 100%;
-  background: #4c5863;
+  background: #bfadaa;
   display: block;
   position: absolute;
   width: 100%;
 }
 .last {
   height: 100%;
-  background: #636f7a;
+  background: #a29390;
   display: block;
   position: absolute;
   width: 100%;
@@ -1242,11 +1242,12 @@ video {
   width: 30%;
   max-width: 150px;
 }
+
 .loader img {
   filter: drop-shadow(0px 0px 36px rgba(255,255,255,0.2));
 }
 .st0 {
-  stroke-width: 7px !important;
+  stroke-width: 8px !important;
 }
 .loader img {
   position: absolute;
