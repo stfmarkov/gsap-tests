@@ -1159,6 +1159,11 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.coin {
+  width: 383px;
+  height: 416px;
   overflow: hidden;
 }
 .big-text .text-bg .title {
@@ -1167,6 +1172,11 @@ body {
   font-weight: 700;
   position: relative;
   z-index: 1;
+}
+
+.coin img {
+  transform: translate(0, 0);
+  /* height: 100%; */
 }
 .big-text .text-bg .subtext {
   color: #382580;;
