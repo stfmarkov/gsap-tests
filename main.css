@@ -1193,16 +1193,21 @@ video {
 
 
 .loader {
-  background: burlywood;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+
+.loader__base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
 }
 
 .loader__done {
@@ -1210,20 +1215,25 @@ video {
 }
 
 .loader__wrapper {
-  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  height: 100%;
+  background: burlywood;
 }
 
 .loader svg,
 .loader img {
-  width: 100%;
+  width: 30%;
 }
 
 .loader img {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   opacity: 0;
+  transform: translate(-50%, -50%);
 }
 
 .loader .shape0 {
