@@ -314,7 +314,7 @@ body {
   height: 15px;
   border-radius: 50%;
   z-index: 2000;
-  background: #2228bd;;
+  background: #3d5e61;
   pointer-events: none;
   /*mix-blend-mode: difference;*/
 }
@@ -543,24 +543,28 @@ body {
   width: 100%;
   position: relative;
 }
-/*.first-screen:after {*/
-/*  content: '';*/
-/*  width: 100px;*/
-/*  height: 50px;*/
-/*  background: #7957ff;*/
-/*  transform: skewY(30deg);*/
-/*  position: absolute;*/
-/*  top: 245px;*/
-/*  right: 60px;*/
-/*  z-index: 1;*/
+.first-screen:after {
+  content: "We are        Cazle";
+  position: absolute;
+  font-size: 130px;
+  color: #c0c9ce;
+  max-width: 970px;
+  text-align: center;
+  line-height: 1em;
+  z-index: -1;
+  background: linear-gradient(45deg,#e2aeae 7%,#afc5c7 70%);
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .started {
   padding: 13px 25px;
   border-radius: 100px;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  background: rgb(230 104 76 / 16%);
-  color: #e68c4c;
+  background: rgb(130 169 173);
+  color: #ffffff;
   margin-left: 30px;
   transition: all .3s ease 0s;
 }
@@ -571,7 +575,7 @@ body {
   border-radius: 20px;
   display: inline-block;
   margin-left: 10px;
-  background: #e68c4c;
+  background: #fff;
   transition: all .3s ease;
   opacity: 1;
 }
@@ -668,6 +672,14 @@ nav img {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.test-text:after {
+  content: '';
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(158, 173, 175, 0.41), transparent);
+  position: absolute;
+  bottom: 0;
 }
 .left, .right {
   width: 400px;
@@ -1187,7 +1199,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 3;
+  z-index: 3000;
 }
 
 .loader__base {
@@ -1196,7 +1208,7 @@ video {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #323b44;
+  background: #d6c2be;
 }
 
 .loader__done {
@@ -1209,18 +1221,18 @@ video {
   justify-content: center;
   position: relative;
   height: 100%;
-  background: #14171b;
+  background: #e6d1cc;
 }
 .overlay {
   height: 100%;
-  background: #4c5863;
+  background: #bfadaa;
   display: block;
   position: absolute;
   width: 100%;
 }
 .last {
   height: 100%;
-  background: #636f7a;
+  background: #a29390;
   display: block;
   position: absolute;
   width: 100%;
@@ -1231,11 +1243,12 @@ video {
   width: 30%;
   max-width: 150px;
 }
+
 .loader img {
   filter: drop-shadow(0px 0px 36px rgba(255,255,255,0.2));
 }
 .st0 {
-  stroke-width: 7px !important;
+  stroke-width: 8px !important;
 }
 .loader img {
   position: absolute;

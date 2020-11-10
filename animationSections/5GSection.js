@@ -6,6 +6,8 @@ function init5GSection() {
     let tl = gsap.timeline({ totalDuration: 20 });
 
     tl.addLabel("start")
+        .to(".loader__wrapper img", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
+        .to(".loader__wrapper svg", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
         .to(
             ".loader__wrapper img",
             {
@@ -99,7 +101,7 @@ function init5GSection() {
 
   tl_v
       .addLabel("start")
-      .from(".center", {scaleX: 2.5, scaleY: 2.5, duration: 1,}, "start")
+      .from(".center", {scaleX: 1.5, scaleY: 1.5, duration: 1,}, "start")
       .to(".change-text", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".text-two", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
