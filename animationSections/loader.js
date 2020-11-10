@@ -1,5 +1,5 @@
 function initLoader() {
-  // if (!document.querySelector(".loader")) return;
+  if (!document.querySelector(".loader")) return;
 
   let tl = gsap.timeline({ totalDuration: 20 });
 
@@ -63,7 +63,7 @@ function initLoader() {
           },
           "exit+=0.39"
       )
-    // .call(() => {
-    //   document.querySelector(".loader").classList.add("loader__done");
-    // });
+    .call(() => {
+      document.querySelector(".loader").classList.add("loader__done");
+    });
 }
