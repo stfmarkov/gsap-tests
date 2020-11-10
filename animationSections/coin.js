@@ -8,7 +8,6 @@ function initCoin() {
     end: `+=${animationLength}px`,
     // pin: true,
     onUpdate: rotate,
-    markers: true,
   });
 
   function rotate(event) {
