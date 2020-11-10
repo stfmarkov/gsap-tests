@@ -19,7 +19,7 @@ function initCoin() {
     const img = Math.ceil(progress / step);
 
     // console.log(progress);
-
+    if (!document.querySelector(".coin img")) return;
     document.querySelector(".coin img").style.transform = `translateX(${
       (img - 1) * -1.129
     }%`;
