@@ -1186,6 +1186,55 @@ body {
   max-width: 500px;
   margin: 20px auto 0 auto;
 }
+<<<<<<< HEAD
 video {
   max-width: 300px;
 }
+=======
+
+.loader {
+  background: burlywood;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__done {
+  pointer-events: none;
+}
+
+.loader__wrapper {
+  width: 30%;
+  position: relative;
+}
+
+.loader svg,
+.loader img {
+  width: 100%;
+}
+
+.loader img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.loader .shape0 {
+  stroke-dasharray: 2451px;
+  stroke-dashoffset: 2451px;
+  /* stroke-dashoffset: 0; */
+}
+
+.loader .shape1 {
+  stroke-dasharray: 3176px;
+  stroke-dashoffset: 3176px;
+  /* stroke-dashoffset: 0; */
+}
+>>>>>>> e0a2fa597a504de9a26dc4f2a804309eabfcd7d5
