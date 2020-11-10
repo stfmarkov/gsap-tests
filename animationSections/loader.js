@@ -1,4 +1,7 @@
 function initLoader() {
+    if (!document.querySelector(".loader")) return;
+
+    let tl = gsap.timeline({ totalDuration: 20 });
     tl.addLabel("start")
         .to(".loader__wrapper img", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
         .to(".loader__wrapper svg", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
