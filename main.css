@@ -1186,11 +1186,11 @@ body {
   max-width: 500px;
   margin: 20px auto 0 auto;
 }
-<<<<<<< HEAD
+
 video {
   max-width: 300px;
 }
-=======
+
 
 .loader {
   background: burlywood;
@@ -1237,4 +1237,3 @@ video {
   stroke-dashoffset: 3176px;
   /* stroke-dashoffset: 0; */
 }
->>>>>>> e0a2fa597a504de9a26dc4f2a804309eabfcd7d5
