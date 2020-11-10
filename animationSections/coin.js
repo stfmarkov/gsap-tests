@@ -14,14 +14,14 @@ function initCoin() {
     const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
     if (progress <= 0) return;
 
-    const step = 1.128; // there are 89 imgs - every img stays for 1.12359550562% of the progress
+    const step = 1.129; // there are 89 imgs - every img stays for 1.12359550562% of the progress
 
     const img = Math.ceil(progress / step);
 
     // console.log(progress);
 
     document.querySelector(".coin img").style.transform = `translateX(${
-      (img - 1) * -1.128
+      (img - 1) * -1.129
     }%`;
   }
 
