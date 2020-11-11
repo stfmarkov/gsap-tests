@@ -17,4 +17,5 @@ function initAnimations(params) {
   initCoin();
   logoSpin();
   initLoader();
+  initFloatingImages();
 }
