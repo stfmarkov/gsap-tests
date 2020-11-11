@@ -1,3 +1,34 @@
+function home() {
+    var tl = gsap.timeline(),
+        mySplitText = new SplitText(".change-text", {type: "words,chars"}),
+        words = mySplitText.chars; //an array of all the divs that wrap each character
+    tl
+    .addLabel("start")
+    .from(words, {
+        duration: 0.5,
+        opacity: 0,
+        y: 25,
+        transformOrigin: "top left",
+        ease: "easeIn",
+        stagger: 0.02,
+    })
+        .from(".menu-holder .menu-item", {
+            duration: 0.5,
+            opacity: 0,
+            y: -35,
+            transformOrigin: "top left",
+            ease: "easeIn",
+            stagger: 0.2,
+        },"start+=0.6")
+        // .from(".blend video", {
+        //     duration: 1,
+        //     opacity: 0,
+        //     transformOrigin: "center center",
+        //     ease: "easeIn",
+        // },"start+=0.05")
+    // tl.to(".change-text", {text: {value: "We'r different kind of morgage Leader."}, duration: 2.5, delay: 1, ease: "easeIn"}, "-=1")
+}
+
 function initVideoSection() {
   // const slides = gsap.utils.toArray(".player__slide");
   // const positionModif = 100 / slides.length;
@@ -16,12 +47,6 @@ function initVideoSection() {
     //     chars = mySplitText.chars; //an array of all the divs that wrap each character
     // tl.from(chars, {duration: 0.2, opacity:0, skewX: 70, skewY: 50, x: 80, y:80, transformOrigin:"0% 50% -50",  ease:"back", stagger: 0.05}, "+=0");
 
-    // var tl = gsap.timeline(),
-    //     mySplitText = new SplitText(".change-text", {type:"words,chars"}),
-    //     words = mySplitText.chars; //an array of all the divs that wrap each character
-    // tl.from(words, {duration: 0.5, opacity:0, y:25, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "+=0");
-    // // tl.to(".change-text", {text: {value: "We'r different kind of morgage Leader."}, duration: 2.5, delay: 1, ease: "easeIn"}, "-=1")
-
     var tl2 = gsap.timeline({
         scrollTrigger: {
             trigger: ".text-two",
@@ -31,7 +56,7 @@ function initVideoSection() {
 
     mySplitText = new SplitText(".text-two", {type:"words,chars"}),
         words = mySplitText.chars;
-    tl2.from(words, {duration: 0.2, opacity:0, y:5, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "-=0.5");
+    tl2.from(words, {duration: 0.15, opacity:0, y:5, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "-=0.5");
 
     // var tl3 = gsap.timeline({
     //     scrollTrigger: {

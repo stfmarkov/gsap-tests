@@ -314,7 +314,7 @@ body {
   height: 15px;
   border-radius: 50%;
   z-index: 2000;
-  background: #3d5e61;
+  background: #ffc1b0;
   pointer-events: none;
   /*mix-blend-mode: difference;*/
 }
@@ -543,20 +543,7 @@ body {
   width: 100%;
   position: relative;
 }
-/*.first-screen:after {*/
-/*  content: "We are        Cazle";*/
-/*  position: absolute;*/
-/*  font-size: 130px;*/
-/*  color: #c0c9ce;*/
-/*  max-width: 970px;*/
-/*  text-align: center;*/
-/*  line-height: 1em;*/
-/*  z-index: -1;*/
-/*  background: linear-gradient(45deg,#e2aeae 7%,#afc5c7 70%);*/
-/*  font-weight: 900;*/
-/*  -webkit-background-clip: text;*/
-/*  -webkit-text-fill-color: transparent;*/
-/*}*/
+
 .started {
   padding: 13px 25px;
   border-radius: 100px;
@@ -592,15 +579,19 @@ body {
 nav img {
   filter: sepia(1) brightness(0.9);
 }
-/*.right-decoration {*/
-/*  width: 100px;*/
-/*  height: 50px;*/
-/*  background: #7a7efd;*/
-/*  transform: skewY(25deg);*/
-/*  position: fixed;*/
-/*  right: 100px;*/
-/*  top: 128px;*/
-/*}*/
+.first-screen:after {
+  content: '';
+  width: 230px;
+  height: 112px;
+  position: absolute;
+  border-top-left-radius: 175px;
+  border-top-right-radius: 175px;
+  border: 60px solid #f8eae6;
+  border-bottom: none;
+  top: -118px;
+  left: 32%;
+  transform: rotate(92deg) scale(1.2);
+}
 .right-decoration.two {
   right: auto;
   left: 750px;
@@ -621,19 +612,9 @@ nav img {
   right: auto;
   left: -70px;
 }
-/*.test-text:before {*/
-/*  content: '';*/
-/*  width: 30%;*/
-/*  height: 270px;*/
-/*  background: #ffce6c;*/
-/*  transform: skewY(25deg);*/
-/*  position: fixed;*/
-/*  top: 52%;*/
-/*  left: 0;*/
-/*  z-index: -1;*/
-/*}*/
+
 .change-text {
-  transform: translateY(-100px);
+  transform: translateY(-130px);
 }
 .test-text {
   overflow: hidden;
@@ -652,10 +633,39 @@ nav img {
   line-height: 1.7em;
 
 }
+.menu-holder img {
+  position: relative;
+  top: 5px;
+}
 .logo-sign {
   max-width: 160px;
   margin-bottom: 50px;
   filter: brightness(0);
+}
+.menu-btn {
+  margin: 0;
+  color: #353330;
+  font-weight: 800;
+  padding: 10px 40px 10px 30px;
+  border: 2px solid #49453f40;
+  border-radius: 100px;
+}
+.menu-btn span {
+  position: relative;
+}
+.menu-btn span:before, .menu-btn span:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: #353330;
+  display: inline-block;
+  margin-left: 10px;
+}
+.menu-btn span:before {
+  position: absolute;
+  right: -15px;
+  top: 5px;
 }
 /*.test-text:after {*/
 /*  content: '';*/
@@ -674,8 +684,7 @@ nav img {
   align-items: center;
   height: 100vh;
 }
-/*.test-text:after {*/
-/*  content: '';*/
+/*.test-text .ground {*/
 /*  width: 100%;*/
 /*  height: 40%;*/
 /*  background: linear-gradient(to top, rgba(158, 173, 175, 0.41), transparent);*/
@@ -833,10 +842,19 @@ nav h2 {
 .blend {
   max-width: 1400px;
   margin: 0 auto;
-  color: #4a453f;
+  color: #383838;
   /*background: #fff;*/
   /*mix-blend-mode: screen;*/
   z-index: 1;
+}
+.blend video {
+  position: absolute;
+  bottom: 120px;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 120px;
 }
 .blend-two {
   color: #000 !important;

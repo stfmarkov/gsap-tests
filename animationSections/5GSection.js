@@ -1,6 +1,6 @@
 function init5GSection() {
 
-
+    document.querySelector('video').playbackRate = 2.5;
     if (!document.querySelector(".loader")) return;
 
     let tl = gsap.timeline({ totalDuration: 20 });
@@ -14,7 +14,7 @@ function init5GSection() {
             {
                 opacity: 1,
                 duration: 0.7,
-                ease: Power2.easeIn,
+                ease: Power3.easeIn,
             },
             "start+=1.25"
         )
@@ -24,7 +24,7 @@ function init5GSection() {
                 // opacity: 0,
                 strokeDashoffset: 0,
                 duration: 1.5,
-                ease: Power2.easeIn,
+                ease: Power3.easeIn,
             },
             "start"
         )
@@ -34,7 +34,7 @@ function init5GSection() {
                 //   opacity: 0,
                 strokeDashoffset: 0,
                 duration: 1.3,
-                ease: Power2.easeIn,
+                ease: Power3.easeIn,
             },
             "start+=0.15"
         )
@@ -62,6 +62,9 @@ function init5GSection() {
             },
             "exit+=0.26"
         )
+        .call(() => {
+            home();
+        })
         .to(
             ".last",
             {
@@ -71,12 +74,9 @@ function init5GSection() {
             },
             "exit+=0.39"
         )
-        //  mySplitText = new SplitText(".change-text", {type:"words,chars"}),
-        // words = mySplitText.chars//an array of all the divs that wrap each character
-        // .from(words, {duration: 0.5, opacity:0, y:25, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "+=0");
         .call(() => {
             document.querySelector(".loader").classList.add("loader__done");
-        });
+        })
 
 
 
@@ -107,6 +107,8 @@ function init5GSection() {
       .addLabel("start")
       .from(".center", {scaleX: 3, scaleY: 3, duration: 1,}, "start")
       .to(".change-text", {opacity: 0, duration: 0.3,}, "start+=0.7")
+      .to(".blend video", {opacity: 0, duration: 0.3,}, "start+=0.7")
+      // .to(".ground", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".text-two", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
       .from(".left h3", { opacity: 0, duration: 0.2,}, "start+=1")
