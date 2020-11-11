@@ -1,13 +1,14 @@
 function initCursor() {
 
 
-    TweenMax.fromTo(".dot1", 5, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot2", 8, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot3", 4, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot4", 7, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot5", 4, {y:1100}, {y:-700, ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot6", 12, {y:1100, rotate: "0deg"}, {y:-500, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
-    TweenMax.fromTo(".dot7", 12, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
+
+    // TweenMax.fromTo(".dot1", 5, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
+    // TweenMax.fromTo(".dot2", 8, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
+    // TweenMax.fromTo(".dot3", 4, {y:1100}, {y:-500, ease:Linear.easeNone, repeat:-1});
+    // TweenMax.fromTo(".dot4", 7, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
+    // TweenMax.fromTo(".dot5", 4, {y:1100}, {y:-700, ease:Linear.easeNone, repeat:-1});
+    // TweenMax.fromTo(".dot6", 12, {y:1100, rotate: "0deg"}, {y:-500, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
+    // TweenMax.fromTo(".dot7", 12, {y:1100, rotate: "0deg"}, {y:-700, rotate: "360deg", ease:Linear.easeNone, repeat:-1});
 
 
 
@@ -63,6 +64,27 @@ function initCursor() {
       x: e.clientX,
       y: e.clientY,
     });
+
+
+    var xPos = (e.clientX/window.innerWidth)-0.5,
+        yPos = (e.clientY/window.innerHeight)-0.5,
+        xSkew = (e.clientX/window.innerWidth)-0.5,
+        ySkew = (e.clientY/window.innerHeight)-0.5,
+        box = document.querySelectorAll(".change-text");
+
+    TweenLite.to(box, 0, {
+      translateY: 35 * yPos,
+      translateX: -35 * xPos,
+      rotationY: 30 * xSkew,
+      rotationX: -30 * ySkew,
+      ease: Power3.easeOut,
+      transformPerspective: 900,
+      transformOrigin: 'center center'
+    });
+
+
+
+
 
   });
 

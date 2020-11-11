@@ -1,4 +1,27 @@
+
 function init5GSection() {
+
+    // function autorotate(progress) {
+    //     if (progress > 98) {
+    //         console.log(progress);
+    //         progress = 0;
+    //     }
+    //     const step = 2.0408; // there are 48 imgs - every img stays for 2.083% of the progress
+    //
+    //     const img = Math.ceil(progress / step);
+    //
+    //     if (!document.querySelector(".coin2 img")) return;
+    //     document.querySelector(".coin2 img").style.transform = `translateX(${
+    //   (img - 1) * -2.0408
+    // }%`;
+    //
+    //     progress += 1;
+    //
+    //     setTimeout(() => autorotate(progress), 5);
+    //     // window.requestAnimationFrame(autorotate(progress++));
+    // }
+    //
+    // autorotate(0);
 
     document.querySelector('video').playbackRate = 2.5;
     if (!document.querySelector(".loader")) return;
@@ -105,10 +128,10 @@ function init5GSection() {
 
   tl_v
       .addLabel("start")
-      .from(".center", {scaleX: 3, scaleY: 3, duration: 1,}, "start")
+      .from(".center", {scaleX: 2.7, scaleY: 2.7, duration: 1,}, "start")
       .to(".change-text", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .to(".blend video", {opacity: 0, duration: 0.3,}, "start+=0.7")
-      // .to(".ground", {opacity: 0, duration: 0.3,}, "start+=0.7")
+      .to(".ground", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".text-two", {opacity: 0, duration: 0.3,}, "start+=0.7")
       .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
       .from(".left h3", { opacity: 0, duration: 0.2,}, "start+=1")
