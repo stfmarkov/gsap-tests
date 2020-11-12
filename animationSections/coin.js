@@ -49,9 +49,9 @@ function initCoin() {
 
   function autorotateTl() {
     const step = 1.0204;
-    let numOfImages = 99;
+    let numOfImages = 97;
     let img = 0;
-    if (img > 99) {
+    if (img > 97) {
       img = 0;
     }
     let tl = gsap.timeline({
@@ -61,7 +61,7 @@ function initCoin() {
       tl.to(".coin2 img", {
         x: `${step * -img}%`,
         duration: 0.001, // bigger number is lighter but will eventually break the animation
-        delay: 0.05, // the speed of the animation
+        delay: 0.025, // the speed of the animation
       });
     }
   }
