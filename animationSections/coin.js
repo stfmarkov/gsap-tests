@@ -58,9 +58,8 @@ function initCoin() {
       onComplete: () => tl.restart(),
     });
     for (let img = 0; img < numOfImages; img++) {
-      tl.to(".coin2 img", {
+      tl.set(".coin2 img", {
         x: `${step * -img}%`,
-        duration: 0.001, // bigger number is lighter but will eventually break the animation
         delay: 0.025, // the speed of the animation
       });
     }
