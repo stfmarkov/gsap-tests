@@ -144,8 +144,8 @@ function init5GSection() {
       .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
 
 
-    gsap.fromTo(".move-text", {translateX: 0,},
-        {translateX: -1700, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", end: "top -500%", ease: Power4.easeOut,},}, "start-=2");
+    gsap.fromTo(".move-text", {translateX: 600,},
+        {translateX: -200, opacity: 0, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", ease: Power4.easeOut,},}, "start-=2");
 
 
 

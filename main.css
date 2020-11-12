@@ -581,16 +581,16 @@ nav img {
 }
 .first-screen:after {
   content: '';
-  width: 196px;
+  width: 230px;
   height: 112px;
   position: absolute;
   border-top-left-radius: 175px;
   border-top-right-radius: 175px;
-  border: 40px solid #f2e8e2;
+  border: 60px solid #f2e8e2;
   border-bottom: none;
-  top: 352px;
-  left: -160px;
-  transform: rotate(179deg) scale(3);
+  top: -98px;
+  left: -80px;
+  transform: rotate(92deg) scale(1.2);
 }
 .first-screen:before {
   content: '';
@@ -866,7 +866,7 @@ nav h2 {
 .blend {
   max-width: 1400px;
   margin: 0 auto;
-  color: #383838;
+  color: #000;
   /*background: #fff;*/
   /*mix-blend-mode: screen;*/
   z-index: 1;
@@ -1007,6 +1007,19 @@ nav h2 {
   white-space: nowrap;
   position: absolute;
   top: 10%;
+  z-index: 2;
+}
+.move-text.two {
+  opacity: 0.25;
+  font-size: 180px;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 160px;
+  /*color: rgb(210, 130, 81);*/
+  -webkit-text-fill-color: rgba(255,255,255, 0);
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: rgb(210, 130, 81);
+  font-weight: 800;
   z-index: 2;
 }
 .colored-section div {

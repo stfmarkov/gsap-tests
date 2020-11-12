@@ -82,10 +82,6 @@ function initCursor() {
       transformOrigin: 'center center'
     });
 
-
-
-
-
   });
 
 
