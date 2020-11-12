@@ -18,4 +18,5 @@ function initAnimations(params) {
   logoSpin();
   initLoader();
   initFloatingImages();
+  initLogoScale();
 }

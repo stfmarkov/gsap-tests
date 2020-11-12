@@ -957,7 +957,7 @@ main {
 }
 
 .coin {
-  width: 383px;
+  width: 435px;
   height: 416px;
   overflow: hidden;
   margin: 0 auto;
@@ -1107,4 +1107,26 @@ main {
   font-size: 50px;
   font-family: sans-serif;
   text-align: center;
+}
+
+.logo-scale {
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-scale__logo {
+  border: 10px solid #fff;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+  font-size: 60px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
 }

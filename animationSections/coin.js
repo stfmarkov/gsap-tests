@@ -48,10 +48,10 @@ function initCoin() {
   //   autorotate(1);
 
   function autorotateTl() {
-    const step = 2.0408;
-    let numOfImages = 48;
+    const step = 1.0204;
+    let numOfImages = 99;
     let img = 0;
-    if (img > 48) {
+    if (img > 99) {
       img = 0;
     }
     let tl = gsap.timeline({
