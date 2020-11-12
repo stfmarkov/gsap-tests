@@ -6,7 +6,7 @@ const delay = (ms) => {
 function showOverlay(next, current) {
   let tl = gsap.timeline();
   tl.call(() => {
-    const overlay = document.querySelector(".overlay");
+    const overlay = document.querySelector(".page-overlay");
     overlay.classList.add(next);
     overlay.style.opacity = 1;
   });
@@ -19,16 +19,16 @@ function hideOverlay(next) {
   let tl = gsap.timeline();
 
   tl.call(() => {
-    const overlay = document.querySelector(".overlay");
+    const overlay = document.querySelector(".page-overlay");
     // overlay.classList.add(next);
     overlay.classList.add("large", next);
   });
-  tl.to(".overlay", {
+  tl.to(".page-overlay", {
     opacity: 0,
   });
   tl.addLabel("isGone");
   tl.call(() =>
-    document.querySelector(".overlay").classList.remove("large", next)
+    document.querySelector(".page-overlay").classList.remove("large", next)
   );
 }
 
