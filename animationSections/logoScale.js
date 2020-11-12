@@ -4,7 +4,7 @@ function initLogoScale() {
   video.muted = true; // without this line it's not working although I have "muted" in HTML
   video.play();
 
-  const animationLength = 4500;
+  const animationLength = 5000;
   // pin the section
   ScrollTrigger.create({
     trigger: ".logo-scale",
@@ -25,27 +25,52 @@ function initLogoScale() {
   tl.addLabel("start");
   tl.to(".logo-scale__logo span", {
     scale: 200,
-    duration: 1,
-    ease: Power0.easeNone,
+    duration: 5,
+    ease:Linear.easeNone,
     // opacity: 0,
   });
 
-  tl.to(
-    ".logo-scale__logo svg",
-    {
-      backgroundColor: "rgba(0, 94, 127, 0)",
-      duration: 0.25,
-      ease: Power2.easeIn,
-    },
-    "start+=0.00001"
-  );
+  // tl.to(
+  //   ".logo-scale__logo svg",
+  //   {
+  //     backgroundColor: "rgba(0, 94, 127, 0)",
+  //     duration: 0.7,
+  //     ease: Power2.easeIn,
+  //   },
+  //   "start-=0.0001"
+  // );
   tl.to(
     ".logo-scale__logo .filler",
     {
-      backgroundColor: "rgba(0, 94, 127, 0)",
-      duration: 0.25,
-      ease: Power2.easeIn,
+      backgroundColor: "rgb(26 26 26 / 0%)",
+      duration: 0.9,
+      ease:Linear.easeNone,
     },
-    "start+=0.00001"
+    "start+=0.1"
   );
 }
+
+// tl.to(".logo-scale__logo span", {
+//   scale: 120,
+//   duration: 6,
+//   ease: Power0.easeNone,
+//   // opacity: 0,
+// });
+// tl.to(
+//     ".logo-scale__logo svg",
+//     {
+//       backgroundColor: "rgb(208 172 150 / 0%)",
+//       duration: 0.7,
+//       ease: Power2.easeIn,
+//     },
+//     "start+=0.1"
+// );
+// tl.to(
+//     ".logo-scale__logo .filler",
+//     {
+//       backgroundColor: "rgb(26 26 26 / 0%)",
+//       duration: 0.7,
+//       ease: Power2.easeIn,
+//     },
+//     "start+=0.1"
+// );

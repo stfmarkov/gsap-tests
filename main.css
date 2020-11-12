@@ -1114,8 +1114,64 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
-  background: #005e7f;
+  /*background: #005e7f;*/
+}
+
+.logo-scale__logo span:after {
+  content: "";
+  width: 230px;
+  height: 112px;
+  position: absolute;
+  z-index: 20;
+  border-top-left-radius: 175px;
+  border-top-right-radius: 175px;
+  top: 230px;
+  right: -20px;
+  transform: scale(1.5);
+  border-width: 60px 60px 60px;
+  border-style: solid solid none;
+  border-color: #262626 #262626 #262626;
+  border-image: initial;
+  border-bottom: none;
+  background: #262626;
+}
+.logo-scale__logo span:before {
+  content: "";
+  width: 190px;
+  height: 112px;
+  position: absolute;
+  z-index: 20;
+  border-top-left-radius: 175px;
+  border-top-right-radius: 175px;
+  bottom: 160px;
+  left: 200px;
+  transform: scale(0.4) rotate(-90deg);
+  border-width: 80px;
+  border-style: solid solid none;
+  border-color: #3c7a84 #3c7a84 #3c7a84;
+  border-image: initial;
+  border-bottom: none;
+}
+
+.logo-scale__logo .filler:after {
+  content: "";
+  width: 230px;
+  height: 112px;
+  position: absolute;
+  z-index: 20;
+  border-top-left-radius: 175px;
+  border-top-right-radius: 175px;
+  bottom: 60px;
+  left: 274px;
+  transform: scale(0.2) rotate(180deg);
+  border-width: 60px 60px 60px;
+  border-style: solid solid none;
+  border-color: #9c8374 #9c8374 #9c8374;
+  border-image: initial;
+  border-bottom: none;
+  background: #9c8374;
 }
 
 .logo-scale__logo {
@@ -1152,7 +1208,7 @@ main {
   justify-content: center;
   align-items: center;
 
-  transform-origin: 50.5% 50.5%;
+  transform-origin: 50% 52%;
 }
 
 /* .logo-scale__logo span:before {
@@ -1176,14 +1232,16 @@ main {
 }
 
 .logo-scale__video video {
-  width: 100%;
-  height: 100%;
+  width: 1920px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .logo-scale svg {
-  background: #005e7f;
-  width: 250px;
-  height: 250px;
+  /*background: #d0ac96;*/
+  width: 450px;
+  height: 432px;
 }
 
 .filler {
@@ -1192,6 +1250,6 @@ main {
   position: absolute;
   left: 0;
   top: 0;
-  background: #005e7f;
+  background: #1a1a1a;
   z-index: -1;
 }
