@@ -1,4 +1,24 @@
 
+// function autorotateTl() {
+//     const step = 1.0204;
+//     let numOfImages = 97;
+//     let img = 0;
+//     if (img > 97) {
+//         img = 0;
+//     }
+//     let tl = gsap.timeline({
+//         onComplete: () => tl.restart(),
+//     });
+//     for (let img = 0; img < numOfImages; img++) {
+//         tl.to(".coin img", {
+//             x: `${step * -img}%`,
+//             duration: 0.001, // bigger number is lighter but will eventually break the animation
+//             delay: 0.012, // the speed of the animation
+//         });
+//     }
+// }
+// autorotateTl(0);
+
 function init5GSection() {
 
     // function autorotate(progress) {
@@ -22,6 +42,7 @@ function init5GSection() {
     // }
     //
     // autorotate(0);
+
 
     document.querySelector('video').playbackRate = 2.5;
     if (!document.querySelector(".loader")) return;

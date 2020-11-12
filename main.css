@@ -1015,10 +1015,10 @@ nav h2 {
   white-space: nowrap;
   position: absolute;
   bottom: 160px;
-  /*color: rgb(210, 130, 81);*/
-  -webkit-text-fill-color: rgba(255,255,255, 0);
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: rgb(210, 130, 81);
+  color: rgb(191 157 136 / 55%);
+  /* -webkit-text-fill-color: rgba(255,255,255, 0); */
+  /* -webkit-text-stroke-width: 3px; */
+  /* -webkit-text-stroke-color: rgb(210, 130, 81); */
   font-weight: 800;
   z-index: 2;
 }
