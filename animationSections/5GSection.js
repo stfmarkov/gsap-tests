@@ -1,23 +1,30 @@
 
-// function autorotateTl() {
-//     const step = 1.0204;
-//     let numOfImages = 97;
-//     let img = 0;
-//     if (img > 97) {
-//         img = 0;
-//     }
-//     let tl = gsap.timeline({
-//         onComplete: () => tl.restart(),
-//     });
-//     for (let img = 0; img < numOfImages; img++) {
-//         tl.to(".coin img", {
-//             x: `${step * -img}%`,
-//             duration: 0.001, // bigger number is lighter but will eventually break the animation
-//             delay: 0.012, // the speed of the animation
-//         });
-//     }
-// }
-// autorotateTl(0);
+
+// tl.to(".logo-scale__logo span", {
+//   scale: 120,
+//   duration: 6,
+//   ease: Power0.easeNone,
+//   // opacity: 0,
+// });
+// tl.to(
+//     ".logo-scale__logo svg",
+//     {
+//       backgroundColor: "rgb(208 172 150 / 0%)",
+//       duration: 0.7,
+//       ease: Power2.easeIn,
+//     },
+//     "start+=0.1"
+// );
+// tl.to(
+//     ".logo-scale__logo .filler",
+//     {
+//       backgroundColor: "rgb(26 26 26 / 0%)",
+//       duration: 0.7,
+//       ease: Power2.easeIn,
+//     },
+//     "start+=0.1"
+// );
+
 
 function init5GSection() {
 
@@ -42,6 +49,7 @@ function init5GSection() {
     // }
     //
     // autorotate(0);
+
 
 
     document.querySelector('video').playbackRate = 2.5;
@@ -150,10 +158,10 @@ function init5GSection() {
   tl_v
       .addLabel("start")
       .from(".center", {scaleX: 2.7, scaleY: 2.7, duration: 1,}, "start")
-      .to(".change-text", {opacity: 0, duration: 0.3,}, "start+=0.7")
-      .to(".blend video", {opacity: 0, duration: 0.3,}, "start+=0.7")
+      .to(".change-text", {opacity: 0, duration: 0.2,}, "start+=0.7")
+      .to(".blend video", {opacity: 0, duration: 0.2,}, "start+=0.7")
       .to(".ground", {opacity: 0, duration: 0.3,}, "start+=0.7")
-      .from(".text-two", {opacity: 0, duration: 0.3,}, "start+=0.7")
+      .from(".text-two", {opacity: 0, duration: 0.2,}, "start+=0.7")
       .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
       .from(".left h3", { opacity: 0, duration: 0.2,}, "start+=1")
       .from(".left .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
@@ -163,6 +171,7 @@ function init5GSection() {
       .from(".right h3", {opacity: 0, duration: 0.2,}, "start+=1")
       .from(".right .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
       .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
+
 
 
     gsap.fromTo(".move-text", {translateX: 600,},
