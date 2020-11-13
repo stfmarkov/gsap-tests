@@ -1099,6 +1099,14 @@ main {
   left: calc(50% - 550px);
 }
 
+.images-heading {
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .coin-header {
   height: 100vh;
 }

@@ -19,13 +19,29 @@ function initFloatingImages() {
         ? (-50 + clientYPercent) * 2
         : (clientYPercent - 50) * 2;
 
-    const speed = 13; // Higher is slower
+    const sceneSpeed = 13; // Higher is slower
 
     gsap.to(".images-wrapper", {
-      x: `${-x / speed}%`,
-      y: `${-y / speed}%`,
-      delay: 0.5,
-      ease: Power2.easeOut,
+      x: `${-x / sceneSpeed}%`,
+      y: `${-y / sceneSpeed}%`,
+      delay: 0.2,
+      ease: "power2.out",
+    });
+
+    const imgSpeed = 6; // Higher is slower
+
+    gsap.to(".images-card:nth-of-type(even)", {
+      x: `${-y / imgSpeed}px`,
+      y: `${-x / imgSpeed}px`,
+      delay: 0.3,
+      ease: "power2.out",
+    });
+
+    gsap.to(".images-heading", {
+      x: `${y / imgSpeed}%`,
+      y: `${x / imgSpeed}%`,
+      delay: 0.2,
+      ease: "power2.out",
     });
   });
 }
