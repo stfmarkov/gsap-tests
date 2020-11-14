@@ -4,7 +4,7 @@ function initLogoScale() {
     video.muted = true; // without this line it's not working although I have "muted" in HTML
     video.play();
 
-    const animationLengthScale = 4000;
+    const animationLengthScale = 3000;
     // pin the section
     ScrollTrigger.create({
         trigger: ".logo-scale",
@@ -36,15 +36,16 @@ function initLogoScale() {
     });
 
 
-    tscale.addLabel("start");
-    tscale.to(".logo-scale__logo span", {scale: 65, duration: 2.5, delay: 0.3, ease:Linear.easeNone,});
-    tscale.to(".logo-scale__logo .filler", {backgroundColor: "rgb(26 26 26 / 0%)", duration: 1.5, delay: 0.3, ease:Linear.easeNone,}, "start+=0.25")
-    tscale.to(".logo-scale__logo .filler", {backgroundColor: "rgba(255, 255, 255, 0.8)", duration: 1, delay: 0.3, ease:Linear.easeNone,}, "start+=2.5")
-    tscale.to(".action-call-text", {duration: 0.3, opacity: 1, transformOrigin: "center center", ease:Linear.easeNone,}, "start+=3.5");
-    tscale.to(".action-call-text", {duration: 0.5, translateY: 0, transformOrigin: "center center", ease:Linear.easeNone,}, "start+=3.5");
-    tscale.to(".action-call-text", {duration: 0.5, translateY: "-70%", transformOrigin: "center center", ease:Linear.easeNone,}, "start+=4");
-    tscale.to(".action-call-text", {duration: 0.5, opacity: 0, translateY: "-150%", transformOrigin: "center center", ease:Linear.easeNone,}, "start+=4.3");
-    tscale.to(".logo-scale__logo .filler", {backgroundColor: "rgba(255, 255, 255, 1)", duration: 1, delay: 0.3, ease:Linear.easeNone,}, "start+=3.5")
+    tscale
+        .addLabel("start")
+        .to(".logo-scale__logo span", {scale: 65, duration: 2.5, delay: 0.1, ease:Linear.easeNone,})
+        .to(".logo-scale__logo .filler", {backgroundColor: "rgba(26, 26, 26, 0)", duration: 1.5, delay: 0.05, ease:Linear.easeNone,}, "start+=0.35")
+        .to(".logo-scale__logo .filler", {backgroundColor: "rgba(255, 255, 255, 0.85)", duration: 1, delay: 0.2, ease:Linear.easeNone,}, "start+=2.2")
+        .to(".action-call-text", {duration: 0.3, opacity: 1, transformOrigin: "center center", ease:Linear.easeNone,}, "start+=3.5")
+        .to(".action-call-text", {duration: 0.5, translateY: 0, transformOrigin: "center center", ease:Linear.easeNone,}, "start+=3.5")
+        .to(".action-call-text", {duration: 0.5, translateY: "-70%", transformOrigin: "center center", ease:Linear.easeNone,}, "start+=4")
+        .to(".action-call-text", {duration: 0.5, opacity: 0, translateY: "-150%", transformOrigin: "center center", ease:Linear.easeNone,}, "start+=4.3")
+        .to(".logo-scale__logo .filler", {backgroundColor: "rgba(255, 255, 255, 1)", duration: 1, delay: 0, ease:Linear.easeNone,}, "start+=3.5");
 
 
     // tscale.call(write, null, "start+=3.5");
