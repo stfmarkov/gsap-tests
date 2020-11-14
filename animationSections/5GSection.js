@@ -51,8 +51,36 @@ function init5GSection() {
     // autorotate(0);
 
 
+    if (!document.querySelector(".coin-box")) return;
+    const animationLength = 750;
+    // pin the section
+    ScrollTrigger.create({
+        trigger: ".coin-section",
+        start: "top top",
+        end: `+=${animationLength}px`,
+        pin: true,
+        onUpdate: rotate,
+    });
 
-    document.querySelector('video').playbackRate = 2.5;
+    function rotate(event) {
+        const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
+        if (progress <= 0) return;
+
+        console.log(progress);
+
+        const step = 2.0408; // there are 48 imgs - every img stays for 2.083% of the progress
+
+        const img = Math.ceil(progress / step);
+
+        // console.log(progress);
+        if (!document.querySelector(".coin-box img")) return;
+        document.querySelector(
+            ".coin-box img"
+        ).style.transform = `translateX(${(img - 1) * -2.0408}%`;
+    }
+
+
+    // document.querySelector('video').playbackRate = 2.5;
     if (!document.querySelector(".loader")) return;
 
     let tl = gsap.timeline({ totalDuration: 20 });
