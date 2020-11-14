@@ -1573,3 +1573,6 @@ video {
   overflow: hidden;
   margin: 0 auto;
 }
+.coin-box img {
+  height: 100%;
+}
