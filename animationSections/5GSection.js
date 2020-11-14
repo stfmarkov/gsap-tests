@@ -68,7 +68,9 @@ function init5GSection() {
         .to(".loader__wrapper", {y: "-100%", duration: 0.7, ease: Power4.easeIn,})
         .to(".loader__base", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.13")
         .to(".overlay", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.26")
-        .call(() => {home();})
+        .call(() => {
+            home();
+        })
         .to(".last", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.39")
         .call(() => {
             document.querySelector(".loader").classList.add("loader__done");
@@ -150,6 +152,7 @@ function init5GSection() {
             start: "top top",
             end: "100%-=800px",
             scrub: true,
+            toggleClass: {targets: "nav", className: "active"}
         },
     });
 

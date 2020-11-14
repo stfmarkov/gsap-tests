@@ -32,6 +32,7 @@ function initLogoScale() {
             start: "top top",
             end: `+=${animationLengthScale}px`,
             scrub: 0.15,
+            toggleClass: {targets: "nav", className: "active"}
         },
     });
 
@@ -46,6 +47,7 @@ function initLogoScale() {
         .to(".action-call-text", {duration: 0.5, translateY: "-70%", transformOrigin: "center center", ease:Linear.easeNone,}, "start+=4")
         .to(".action-call-text", {duration: 0.5, opacity: 0, translateY: "-150%", transformOrigin: "center center", ease:Linear.easeNone,}, "start+=4.3")
         .to(".logo-scale__logo .filler", {backgroundColor: "rgba(255, 255, 255, 1)", duration: 1, delay: 0, ease:Linear.easeNone,}, "start+=3.5");
+
 
 
     // tscale.call(write, null, "start+=3.5");

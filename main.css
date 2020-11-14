@@ -786,14 +786,18 @@ nav img {
   /*color: #2128bd;*/
 }
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
   padding: 20px;
+  transition: all .3s ease;
   /*background: rgba(255, 255, 255, 0.6);*/
   /*backdrop-filter: blur(10px);*/
+}
+nav.active {
+  transform: translateY(-100px);
 }
 nav div {
   margin: 0 auto;
