@@ -51,14 +51,44 @@ function init5GSection() {
     // autorotate(0);
 
 
+    // if (!document.querySelector(".coin-box")) return;
+    // const animationLength = 700;
+    // // pin the section
+    // ScrollTrigger.create({
+    //     trigger: ".coin-section",
+    //     start: "top top",
+    //     end: `+=${animationLength}px`,
+    //     pin: true,
+    //     scrub: 0.25,
+    //     onUpdate: rotate,
+    // });
+    //
+    // function rotate(event) {
+    //     const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
+    //     if (progress <= 0) return;
+    //
+    //     console.log(progress);
+    //
+    //     const step = 1.929; // there are 48 imgs - every img stays for 2.083% of the progress
+    //
+    //     const img = Math.ceil(progress / step);
+    //
+    //     console.log(progress);
+    //     if (!document.querySelector(".coin-box img")) return;
+    //     document.querySelector(
+    //         ".coin-box img"
+    //     ).style.transform = `translateX(${(img - 1) * -1.929}%`;
+    // }
+
     if (!document.querySelector(".coin-box")) return;
-    const animationLength = 750;
+    const animationLength = 700;
     // pin the section
     ScrollTrigger.create({
         trigger: ".coin-section",
         start: "top top",
         end: `+=${animationLength}px`,
         pin: true,
+        scrub: 0.25,
         onUpdate: rotate,
     });
 
@@ -68,19 +98,19 @@ function init5GSection() {
 
         console.log(progress);
 
-        const step = 2.0408; // there are 48 imgs - every img stays for 2.083% of the progress
+        const step = 3.86; // there are 48 imgs - every img stays for 2.083% of the progress
 
         const img = Math.ceil(progress / step);
 
-        // console.log(progress);
+        console.log(progress);
         if (!document.querySelector(".coin-box img")) return;
         document.querySelector(
             ".coin-box img"
-        ).style.transform = `translateX(${(img - 1) * -2.0408}%`;
+        ).style.transform = `translateX(${(img - 1) * -3.86}%`;
     }
 
 
-    // document.querySelector('video').playbackRate = 2.5;
+    document.querySelector('video').playbackRate = 2.5;
     if (!document.querySelector(".loader")) return;
 
     let tl = gsap.timeline({ totalDuration: 20 });
