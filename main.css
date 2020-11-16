@@ -8,7 +8,7 @@
 body {
   background: #000;
   color: #f5f5f7;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 .section-5g {
@@ -532,17 +532,17 @@ body {
   background: #59a8b0;
   color: #ffffff;
   margin-left: 30px;
-  transition: all 0.3s ease 0s;
+  transition: all .3s ease 0s;
 }
 .started:after {
-  content: "";
+  content: '';
   width: 10px;
   height: 10px;
   border-radius: 20px;
   display: inline-block;
   margin-left: 10px;
   background: #fff;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
   opacity: 1;
 }
 .started:hover {
@@ -559,7 +559,7 @@ nav img {
   filter: sepia(1) brightness(0);
 }
 .first-screen:after {
-  content: "";
+  content: '';
   width: 190px;
   height: 94px;
   position: absolute;
@@ -572,7 +572,7 @@ nav img {
   transform: rotate(360deg) scale(1.1);
 }
 .first-screen:before {
-  content: "";
+  content: '';
   width: 230px;
   height: 112px;
   position: absolute;
@@ -592,7 +592,7 @@ nav img {
   bottom: 50px;
 }
 .right-decoration:after {
-  content: "";
+  content: '';
   width: 70px;
   height: 30px;
   background: rgb(122 126 253 / 22%);
@@ -635,6 +635,7 @@ nav img {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.7em;
+
 }
 .menu-holder img {
   position: relative;
@@ -655,9 +656,8 @@ nav img {
 .menu-btn span {
   position: relative;
 }
-.menu-btn span:before,
-.menu-btn span:after {
-  content: "";
+.menu-btn span:before, .menu-btn span:after {
+  content: '';
   width: 10px;
   height: 10px;
   border-radius: 50px;
@@ -701,8 +701,7 @@ nav img {
 .left {
   background: #e3ebec;
 }
-.left,
-.right {
+.left, .right {
   width: 450px;
   height: 550px;
   border-radius: 20px;
@@ -714,16 +713,14 @@ nav img {
   z-index: 20;
   /*box-shadow: 0 0 100px -10px rgba(15, 9, 49, 0.11);*/
 }
-.left span,
-.right span {
+.left span, .right span {
   color: #adadad;
   display: block;
   margin-top: 10px;
   font-weight: 500;
   margin-bottom: 50px;
 }
-.left a,
-.right a {
+.left a, .right a {
   padding: 13px 30px;
   border-radius: 100px;
   font-size: 15px;
@@ -731,9 +728,8 @@ nav img {
   text-decoration: none;
   margin-top: 20px;
 }
-.left a:after,
-.right a:after {
-  content: "";
+.left a:after, .right a:after {
+  content: '';
   width: 10px;
   height: 10px;
   border-radius: 20px;
@@ -751,7 +747,7 @@ nav img {
   color: #499aa0;
 }
 .right a {
-  background: #fff;
+  background:  #fff;
   color: #e68c4c;
 }
 .left h3 {
@@ -820,7 +816,7 @@ nav ul li span {
   z-index: 100;
   display: inline-block;
   transform-origin: left center;
-  transition: all 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all .9s cubic-bezier(.19,1,.22,1);
 }
 /*nav ul li span:after {*/
 /*  content: attr(data-text);*/
@@ -964,7 +960,7 @@ nav h2 {
   position: relative;
 }
 .colored-section:before {
-  content: "";
+  content: '';
   width: 70px;
   height: 30px;
   background: rgb(122 126 251 / 16%);
@@ -975,7 +971,7 @@ nav h2 {
   z-index: 20;
 }
 .colored-section:after {
-  content: "";
+  content: '';
   width: 131px;
   height: 50px;
   background: #7a7efb;
@@ -1036,8 +1032,7 @@ body {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  box-shadow: -30px 10px 120px -40px rgb(0 0 0 / 20%),
-    inset 3px 1px 9px 2px #00000014;
+  box-shadow: -30px 10px 120px -40px rgb(0 0 0 / 20%), inset 3px 1px 9px 2px #00000014;
   padding: 20px;
 }
 .front video {
@@ -1055,8 +1050,9 @@ body {
   margin: auto;
   transform-origin: left bottom;
   z-index: 1;
+
 }
-.dot1 {
+.dot1{
   width: 30px;
   height: 30px;
   position: absolute;
@@ -1066,7 +1062,7 @@ body {
   background: #ffcc57;
   border-radius: 50%;
 }
-.dot2 {
+.dot2{
   width: 25px;
   height: 7px;
   position: absolute;
@@ -1076,7 +1072,7 @@ body {
   background: #7661ff;
 }
 .dot2:after {
-  content: "";
+  content: '';
   width: 7px;
   height: 25px;
   position: absolute;
@@ -1187,7 +1183,7 @@ body {
 .card.two {
   right: 15%;
 }
-.big-text .big-bg {
+.big-text .big-bg  {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1231,13 +1227,13 @@ body {
 }
 .big-text .text-bg .title {
   font-size: 150px;
-  color: #382580;
+  color: #382580;;
   font-weight: 700;
   position: relative;
   z-index: 1;
 }
 .big-text .text-bg .subtext {
-  color: #382580;
+  color: #382580;;
   font-weight: 500;
   font-size: 50px;
   text-align: center;
