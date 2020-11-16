@@ -26,7 +26,7 @@ function initLogoScale() {
   tl.to(".logo-scale__logo span", {
     scale: 200,
     duration: 5,
-    ease:Linear.easeNone,
+    ease: "inOut",
     // opacity: 0,
   });
 
@@ -44,7 +44,7 @@ function initLogoScale() {
     {
       backgroundColor: "rgb(26 26 26 / 0%)",
       duration: 0.9,
-      ease:Linear.easeNone,
+      ease: Linear.easeNone,
     },
     "start+=0.1"
   );

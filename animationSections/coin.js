@@ -1,6 +1,6 @@
 function initCoin() {
   if (!document.querySelector(".coin")) return;
-  const animationLength = 250;
+  const animationLength = 500;
   // pin the section
   ScrollTrigger.create({
     trigger: "nav",
@@ -11,16 +11,16 @@ function initCoin() {
   });
 
   function rotate(event) {
-    const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
+    let progressModif = 0;
+    if (event.progress > 0.45 && event.progress < 0.75) return;
+    if (event.progress > 0.65) progressModif = 0.3;
+    const progress = (event.progress - progressModif) * 100 - 0.1; // -0.1 is becouse of js math
     if (progress <= 0) return;
-
-    console.log(progress);
 
     const step = 2.0408; // there are 48 imgs - every img stays for 2.083% of the progress
 
     const img = Math.ceil(progress / step);
 
-    // console.log(progress);
     if (!document.querySelector(".coin img")) return;
     document.querySelector(
       ".coin:not(.coin2) img"
@@ -48,6 +48,7 @@ function initCoin() {
   //   autorotate(1);
 
   function autorotateTl() {
+    console.log("rotate");
     const step = 1.0204;
     let numOfImages = 97;
     let img = 0;
