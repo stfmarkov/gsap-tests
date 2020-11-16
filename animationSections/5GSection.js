@@ -81,7 +81,7 @@ function init5GSection() {
     // }
 
     if (!document.querySelector(".coin-box")) return;
-    const animationLength = 700;
+    const animationLength = 3000;
     // pin the section
     ScrollTrigger.create({
         trigger: ".coin-section",
@@ -116,21 +116,29 @@ function init5GSection() {
         .to(".coin-section h2", {y: "-150px", duration: 3.5, delay: 2,}, "start-coin+=2.5")
         .to(".coin-section h2", {opacity: 0, duration: 2.5,delay: 2,}, "start-coin+=2.5")
 
+    // window.addEventListener('scroll', function(e) {
+    //     console.log('full scroll resolution');
+    // });
+
     function rotate(event) {
-        const progress = event.progress * 100 - 0.2; // -0.1 is becouse of js math
+        let progressModif = 0
+        const point1 = 0.28;
+        const point2 = 0.68;
+        const dif = point2 - point1;
+        const percentModif = 1/(1 - dif)/// transforms the remainder of the progress to percent
+        if(event.progress > point1 && event.progress < point2) return;
+        if (event.progress > point2) progressModif = dif;
+        const progress = (event.progress - progressModif) * (100*percentModif) - 0.2; // -0.1 is becouse of js math
         if (progress <= 0) return;
 
-        console.log(progress);
-
-        const step = 2.04; // there are 48 imgs - every img stays for 2.083% of the progress
+        const step = 2.041; // there are 48 imgs - every img stays for 2.083% of the progress
 
         const img = Math.ceil(progress / step);
 
-        console.log(progress);
         if (!document.querySelector(".coin-box img")) return;
         document.querySelector(
             ".coin-box img"
-        ).style.transform = `translateX(${(img - 1) * -2.04}%`;
+        ).style.transform = `translateX(${(img - 1) * - step}%`;
     }
 
 

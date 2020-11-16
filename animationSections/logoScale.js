@@ -36,11 +36,20 @@ function initLogoScale() {
         },
     });
 
+    // function toogleNavClass(params) {
+    //     if( document.querySelector('nav').classList.value.includes('active'))
+    //     document.querySelector('nav').classList.remove('active')
+    //     else 
+    //     document.querySelector('nav').classList.add('active')
+    // }
+
 
     tscale
         .addLabel("start")
         .to(".logo-scale__logo span", {scale: 65, duration: 2.5, delay: 0.1, ease:Linear.easeNone,})
+        // .call( () => { toogleNavClass() }, null, 'start' )
         .to(".logo-scale__logo .filler", {backgroundColor: "rgba(26, 26, 26, 0)", duration: 1.5, delay: 0.05, ease:Linear.easeNone,}, "start+=0.35")
+        // .call( () => { toogleNavClass() }, null, 'start+=2.5' )
         .to(".logo-scale__logo .filler", {backgroundColor: "rgba(255, 255, 255, 0.85)", duration: 1, delay: 0.2, ease:Linear.easeNone,}, "start+=2.2")
         .to(".action-call-text", {duration: 0.3, opacity: 1, transformOrigin: "center center", ease:Linear.easeNone,}, "start+=3.5")
         .to(".action-call-text", {duration: 0.5, translateY: 0, transformOrigin: "center center", ease:Linear.easeNone,}, "start+=3.5")
