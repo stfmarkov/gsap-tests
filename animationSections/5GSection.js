@@ -61,76 +61,18 @@ function init5GSection() {
     tl.addLabel("start")
         .to(".loader__wrapper img", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
         .to(".loader__wrapper svg", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
-        .to(
-            ".loader__wrapper img",
-            {
-                opacity: 1,
-                duration: 0.7,
-                ease: Power3.easeIn,
-            },
-            "start+=1.25"
-        )
-        .to(
-            ".loader .shape1",
-            {
-                // opacity: 0,
-                strokeDashoffset: 0,
-                duration: 1.5,
-                ease: Power3.easeIn,
-            },
-            "start"
-        )
-        .to(
-            ".loader .shape0",
-            {
-                //   opacity: 0,
-                strokeDashoffset: 0,
-                duration: 1.3,
-                ease: Power3.easeIn,
-            },
-            "start+=0.15"
-        )
+        .to(".loader__wrapper img", {opacity: 1, duration: 0.7, ease: Power3.easeIn,}, "start+=1.25")
+        .to(".loader .shape1", {strokeDashoffset: 0, duration: 1.5, ease: Power3.easeIn,}, "start")
+        .to(".loader .shape0", {strokeDashoffset: 0, duration: 1.3, ease: Power3.easeIn,}, "start+=0.15")
         .addLabel("exit")
-        .to(".loader__wrapper", {
-            y: "-100%",
-            duration: 0.7,
-            ease: Power4.easeIn,
-        })
-        .to(
-            ".loader__base",
-            {
-                y: "-100%",
-                duration: 0.7,
-                ease: Power4.easeIn,
-            },
-            "exit+=0.13"
-        )
-        .to(
-            ".overlay",
-            {
-                y: "-100%",
-                duration: 0.7,
-                ease: Power4.easeIn,
-            },
-            "exit+=0.26"
-        )
-        .call(() => {
-            home();
-        })
-        .to(
-            ".last",
-            {
-                y: "-100%",
-                duration: 0.7,
-                ease: Power4.easeIn,
-            },
-            "exit+=0.39"
-        )
+        .to(".loader__wrapper", {y: "-100%", duration: 0.7, ease: Power4.easeIn,})
+        .to(".loader__base", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.13")
+        .to(".overlay", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.26")
+        .call(() => {home();})
+        .to(".last", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.39")
         .call(() => {
             document.querySelector(".loader").classList.add("loader__done");
         })
-
-
 
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
@@ -171,6 +113,7 @@ function init5GSection() {
       .from(".right h3", {opacity: 0, duration: 0.2,}, "start+=1")
       .from(".right .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
       .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
+
 
 
 

@@ -54,9 +54,9 @@ function initVideoSection() {
         }
     });
 
-    mySplitText = new SplitText(".text-two", {type:"words,chars"}),
-        words = mySplitText.chars;
-    tl2.from(words, {duration: 0.15, opacity:0, y:5, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "-=0.5");
+    // mySplitText = new SplitText(".text-two", {type:"words,chars"}),
+    //     words = mySplitText.chars;
+    // tl2.from(words, {duration: 0.15, opacity:0, y:5, transformOrigin:"top left",  ease:"easeIn", stagger: 0.02}, "-=0.5");
 
     // var tl3 = gsap.timeline({
     //     scrollTrigger: {
