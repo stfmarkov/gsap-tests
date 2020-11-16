@@ -116,9 +116,15 @@ function init5GSection() {
     });
 
     tl_coin.addLabel("start-coin")
+        .to(".coin-section", {backgroundColor: "rgb(242 232 226)", duration: 0.4,}, "start-coin+=0.5")
+        .to(".menu .started", {backgroundColor: "rgb(231 168 149)", duration: 0.2,}, "start-coin+=0.5")
         .to(".coin-section h2 span:last-of-type", {x: "60px", duration: 0.5,}, "start-coin+=0.6")
-        .to(".coin-section h2 span", {opacity: 1, duration: 0.5,}, "start-coin+=0.6")
+        .to(".coin-section h2 span", {opacity: 1, duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section h2 span:first-of-type", {x: "-60px", duration: 1,}, "start-coin+=0.5")
+        .to(".coin-section", {backgroundColor: "rgb(255, 255, 255)", duration: 0.4,}, "start-coin+=1")
+        .to(".menu .started", {backgroundColor: "rgb(89, 168, 176)", duration: 0.2,}, "start-coin+=1.2")
+        .to(".coin-section .base", {backgroundImage: "linear-gradient(to top, rgba(255, 255, 255, 0), transparent)", duration: 0.4,}, "start-coin+=1")
+        .to(".coin-section:after", {css: {opacity: 0}, duration: 0.4,}, "start-coin+=1")
         .to(".coin-section h2", {opacity: 0, duration: 0.3,}, "start-coin+=1.1")
 
     function rotate(event) {
@@ -149,6 +155,18 @@ function init5GSection() {
         ).style.transform = `translateX(${(img - 1) * -0.7353245}%`;
 
     }
+
+    let tl_middle = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".middle",
+            start: "top 80%",
+            end: "top 50%",
+            scrub: 0.25,
+        },
+    });
+    tl_middle
+        .to(".middle h3", {opacity: 1, duration: 0.7})
+        .to(".middle a", {opacity: 1, duration: 0.7})
 
 
     // document.querySelector('video').playbackRate = 2.5;
@@ -219,7 +237,7 @@ function init5GSection() {
 
 
     gsap.fromTo(".move-text", {translateX: 600,},
-        {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", ease: Power4.easeOut,},}, "start-=2");
+        {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 50%", ease: Power4.easeOut,},}, "start-=4");
 
 
 
