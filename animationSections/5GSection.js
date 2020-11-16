@@ -88,17 +88,41 @@ function init5GSection() {
         start: "top top",
         end: `+=${animationLength}px`,
         pin: true,
-        scrub: 0.25,
+        scrub: true,
         onUpdate: rotate,
     });
 
+    let tl_intro = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".intro",
+            start: "top top",
+            scrub: 0.25,
+        },
+    });
+    tl_intro.to(".intro h1", {opacity: 0, duration: 0.7,})
+
+    let tl_coin = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".coin-section h2",
+        start: "top 50%",
+        scrub: 0.25,
+          pin: true,
+      },
+    });
+
+    tl_coin.addLabel("start-coin")
+        .to(".coin-section h2", {y: 0, duration: 2,}, "start-coin")
+        .to(".coin-section h2", {opacity: 1, duration: 0.7,}, "start-coin")
+        .to(".coin-section h2", {y: "-150px", duration: 3.5, delay: 2,}, "start-coin+=2.5")
+        .to(".coin-section h2", {opacity: 0, duration: 2.5,delay: 2,}, "start-coin+=2.5")
+
     function rotate(event) {
-        const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
+        const progress = event.progress * 100 - 0.2; // -0.1 is becouse of js math
         if (progress <= 0) return;
 
         console.log(progress);
 
-        const step = 3.86; // there are 48 imgs - every img stays for 2.083% of the progress
+        const step = 2.04; // there are 48 imgs - every img stays for 2.083% of the progress
 
         const img = Math.ceil(progress / step);
 
@@ -106,11 +130,11 @@ function init5GSection() {
         if (!document.querySelector(".coin-box img")) return;
         document.querySelector(
             ".coin-box img"
-        ).style.transform = `translateX(${(img - 1) * -3.86}%`;
+        ).style.transform = `translateX(${(img - 1) * -2.04}%`;
     }
 
 
-    document.querySelector('video').playbackRate = 2.5;
+    // document.querySelector('video').playbackRate = 2.5;
     if (!document.querySelector(".loader")) return;
 
     let tl = gsap.timeline({ totalDuration: 20 });
@@ -178,7 +202,7 @@ function init5GSection() {
 
 
     gsap.fromTo(".move-text", {translateX: 600,},
-        {translateX: -200, opacity: 0, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", ease: Power4.easeOut,},}, "start-=2");
+        {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 90%", ease: Power4.easeOut,},}, "start-=2");
 
 
 

@@ -121,7 +121,18 @@ function initCursor() {
   });
 
 
-
+  // let tl_coin = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".coin-section",
+  //     start: "top top",
+  //     scrub: 0.25,
+  //     pin: true,
+  //   },
+  // });
+  //
+  // tl_coin.addLabel("start-coin")
+  //     .to(".coin-section h2", {y: "-500px", duration: 1,})
+  //     .to(".coin-section h2", {opacity: 0, duration: 0.4,}, "-=1")
 
 
 

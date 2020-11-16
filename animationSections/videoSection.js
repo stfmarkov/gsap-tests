@@ -1,6 +1,6 @@
 function home() {
     var tl = gsap.timeline(),
-        mySplitText = new SplitText(".change-text", {type: "words,chars"}),
+        mySplitText = new SplitText(".intro h1", {type: "words,chars"}),
         words = mySplitText.chars; //an array of all the divs that wrap each character
     tl
     .addLabel("start")
@@ -12,6 +12,15 @@ function home() {
         ease: "easeIn",
         stagger: 0.02,
     })
+        // .from(".coin-section h2 span", {
+        //     duration: 1,
+        //     opacity: 0,
+        //     y: -35,
+        //     transformOrigin: "top left",
+        //     ease: "easeIn",
+        //     stagger: 0.4,
+        // },"start+=0.8")
+
         .from(".menu-holder .menu-item", {
             duration: 0.5,
             opacity: 0,

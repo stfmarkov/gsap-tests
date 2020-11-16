@@ -4,6 +4,8 @@
     <list default="true" id="0bedb12c-be1a-49a5-add9-fbc72e38dae3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/animationSections/5GSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/animationSections/5GSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animationSections/cursor.js" beforeDir="false" afterPath="$PROJECT_DIR$/animationSections/cursor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/animationSections/videoSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/animationSections/videoSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
     </list>
