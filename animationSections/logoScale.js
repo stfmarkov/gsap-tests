@@ -33,7 +33,7 @@ function initLogoScale() {
             end: `+=${animationLengthScale}px`,
             scrub: 0.15,
         },
-    }); 
+    });
 
 
     tscale.addLabel("start");
