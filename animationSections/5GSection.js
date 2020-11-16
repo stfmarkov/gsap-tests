@@ -81,7 +81,10 @@ function init5GSection() {
     // }
 
     if (!document.querySelector(".coin-box")) return;
-    const animationLength = 700;
+    const animationLength = 1500;
+
+    var loops = 0;
+
     // pin the section
     ScrollTrigger.create({
         trigger: ".coin-section",
@@ -96,41 +99,55 @@ function init5GSection() {
         scrollTrigger: {
             trigger: ".intro",
             start: "top top",
+            end: "400px",
             scrub: 0.25,
         },
     });
     tl_intro.to(".intro h1", {opacity: 0, duration: 0.7,})
+    // tl_intro.to(".intro h1 .shadow", {width: "270%", duration:0.7})
 
     let tl_coin = gsap.timeline({
       scrollTrigger: {
-        trigger: ".coin-section h2",
+        trigger: ".coin-section",
         start: "top 50%",
+          end: "1500px",
         scrub: 0.25,
-          pin: true,
       },
     });
 
     tl_coin.addLabel("start-coin")
-        .to(".coin-section h2", {y: 0, duration: 2,}, "start-coin")
-        .to(".coin-section h2", {opacity: 1, duration: 0.7,}, "start-coin")
-        .to(".coin-section h2", {y: "-150px", duration: 3.5, delay: 2,}, "start-coin+=2.5")
-        .to(".coin-section h2", {opacity: 0, duration: 2.5,delay: 2,}, "start-coin+=2.5")
+        .to(".coin-section h2 span:last-of-type", {x: "60px", duration: 0.5,}, "start-coin+=0.6")
+        .to(".coin-section h2 span", {opacity: 1, duration: 0.5,}, "start-coin+=0.6")
+        .to(".coin-section h2 span:first-of-type", {x: "-60px", duration: 1,}, "start-coin+=0.5")
+        .to(".coin-section h2", {opacity: 0, duration: 0.3,}, "start-coin+=1.1")
 
     function rotate(event) {
-        const progress = event.progress * 100 - 0.2; // -0.1 is becouse of js math
+        const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
         if (progress <= 0) return;
 
-        console.log(progress);
-
-        const step = 2.04; // there are 48 imgs - every img stays for 2.083% of the progress
+        const step = 0.735; // there are 48 imgs - every img stays for 2.083% of the progress
 
         const img = Math.ceil(progress / step);
+
+        console.log(img);
+
+        // if(img >= 24) {
+        //     if(event.direction > 0) {
+        //         loops++;
+        //     }
+        //     if(loops <= 100) {
+        //         return;
+        //     } else {
+        //         loops = 0;
+        //     }
+        // }
 
         console.log(progress);
         if (!document.querySelector(".coin-box img")) return;
         document.querySelector(
             ".coin-box img"
-        ).style.transform = `translateX(${(img - 1) * -2.04}%`;
+        ).style.transform = `translateX(${(img - 1) * -0.7353245}%`;
+
     }
 
 
