@@ -1,84 +1,5 @@
 
-
-// tl.to(".logo-scale__logo span", {
-//   scale: 120,
-//   duration: 6,
-//   ease: Power0.easeNone,
-//   // opacity: 0,
-// });
-// tl.to(
-//     ".logo-scale__logo svg",
-//     {
-//       backgroundColor: "rgb(208 172 150 / 0%)",
-//       duration: 0.7,
-//       ease: Power2.easeIn,
-//     },
-//     "start+=0.1"
-// );
-// tl.to(
-//     ".logo-scale__logo .filler",
-//     {
-//       backgroundColor: "rgb(26 26 26 / 0%)",
-//       duration: 0.7,
-//       ease: Power2.easeIn,
-//     },
-//     "start+=0.1"
-// );
-
-
 function init5GSection() {
-
-    // function autorotate(progress) {
-    //     if (progress > 98) {
-    //         console.log(progress);
-    //         progress = 0;
-    //     }
-    //     const step = 2.0408; // there are 48 imgs - every img stays for 2.083% of the progress
-    //
-    //     const img = Math.ceil(progress / step);
-    //
-    //     if (!document.querySelector(".coin2 img")) return;
-    //     document.querySelector(".coin2 img").style.transform = `translateX(${
-    //   (img - 1) * -2.0408
-    // }%`;
-    //
-    //     progress += 1;
-    //
-    //     setTimeout(() => autorotate(progress), 5);
-    //     // window.requestAnimationFrame(autorotate(progress++));
-    // }
-    //
-    // autorotate(0);
-
-
-    // if (!document.querySelector(".coin-box")) return;
-    // const animationLength = 700;
-    // // pin the section
-    // ScrollTrigger.create({
-    //     trigger: ".coin-section",
-    //     start: "top top",
-    //     end: `+=${animationLength}px`,
-    //     pin: true,
-    //     scrub: 0.25,
-    //     onUpdate: rotate,
-    // });
-    //
-    // function rotate(event) {
-    //     const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
-    //     if (progress <= 0) return;
-    //
-    //     console.log(progress);
-    //
-    //     const step = 1.929; // there are 48 imgs - every img stays for 2.083% of the progress
-    //
-    //     const img = Math.ceil(progress / step);
-    //
-    //     console.log(progress);
-    //     if (!document.querySelector(".coin-box img")) return;
-    //     document.querySelector(
-    //         ".coin-box img"
-    //     ).style.transform = `translateX(${(img - 1) * -1.929}%`;
-    // }
 
     if (!document.querySelector(".coin-box")) return;
     const animationLength = 1500;
@@ -118,14 +39,19 @@ function init5GSection() {
     tl_coin.addLabel("start-coin")
         .to(".coin-section", {backgroundColor: "rgb(242 232 226)", duration: 0.4,}, "start-coin+=0.5")
         .to(".menu .started", {backgroundColor: "rgb(231 168 149)", duration: 0.2,}, "start-coin+=0.5")
-        .to(".coin-section h2 span:last-of-type", {x: "60px", duration: 0.5,}, "start-coin+=0.6")
-        .to(".coin-section h2 span", {opacity: 1, duration: 0.3,}, "start-coin+=0.6")
-        .to(".coin-section h2 span:first-of-type", {x: "-60px", duration: 1,}, "start-coin+=0.5")
+        .to(".coin-section h2 span:last-of-type", {x: "60px", duration: 0.3,}, "start-coin+=0.6")
+        // .to(".coin-section h2 span:last-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
+        .to(".coin-section h2 span", {opacity: 1, duration: 0.2,}, "start-coin+=0.6")
+        // .to(".coin-section h2 span i", {opacity: 1, duration: 0.2,}, "start-coin+=0.7")
+        .to(".coin-section h2 span:first-of-type", {x: "-60px", duration: 0.3,}, "start-coin+=0.6")
+        // .to(".coin-section h2 span:first-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section", {backgroundColor: "rgb(255, 255, 255)", duration: 0.4,}, "start-coin+=1")
         .to(".menu .started", {backgroundColor: "rgb(89, 168, 176)", duration: 0.2,}, "start-coin+=1.2")
         .to(".coin-section .base", {backgroundImage: "linear-gradient(to top, rgba(255, 255, 255, 0), transparent)", duration: 0.4,}, "start-coin+=1")
         .to(".coin-section:after", {css: {opacity: 0}, duration: 0.4,}, "start-coin+=1")
-        .to(".coin-section h2", {opacity: 0, duration: 0.3,}, "start-coin+=1.1")
+        .to(".coin-section h2", {opacity: 0, duration: 0.2,}, "start-coin+=1")
+        .to(".coin-section h2 span:last-of-type", {x: "100px", duration: 0.2,}, "start-coin+=1.03")
+        .to(".coin-section h2 span:first-of-type", {x: "-100px", duration: 0.2,}, "start-coin+=1.03")
 
     function rotate(event) {
         const progress = event.progress * 100 - 0.1; // -0.1 is becouse of js math
@@ -137,16 +63,6 @@ function init5GSection() {
 
         console.log(img);
 
-        // if(img >= 24) {
-        //     if(event.direction > 0) {
-        //         loops++;
-        //     }
-        //     if(loops <= 100) {
-        //         return;
-        //     } else {
-        //         loops = 0;
-        //     }
-        // }
 
         console.log(progress);
         if (!document.querySelector(".coin-box img")) return;
@@ -234,13 +150,10 @@ function init5GSection() {
       .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
 
 
-
-
-    gsap.fromTo(".move-text", {translateX: 600,},
+        gsap.fromTo(".move-text", {translateX: 600,},
         {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 50%", ease: Power4.easeOut,},}, "start-=4");
 
-
-
+  
     let tl_card = gsap.timeline({
         scrollTrigger: {
             trigger: ".colored-section",

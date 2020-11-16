@@ -1661,11 +1661,17 @@ video {
   text-align: right;
   transform: translateX(-160px);
 }
+/*.coin-section h2 span:first-child i {*/
+/*  transform: translateX(-100px) translateY(-45px);*/
+/*}*/
 .coin-section h2 span:last-of-type {
-  left: 50px;
+  left: 40px;
   position: relative;
   transform: translateX(160px);
 }
+/*.coin-section h2 span:last-of-type i {*/
+/*  transform: translateX(100px) translateY(-45px);*/
+/*}*/
 .coin-section h2 span i {
   font-style: normal;
   font-size: 30px;
@@ -1673,6 +1679,7 @@ video {
   transform: translateY(-45px) translateX(2px);
   display: inline-block;
   color: #868686;
+  /*opacity: 0;*/
 }
 .coin-section .base {
   width: 100%;
