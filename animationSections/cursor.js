@@ -68,15 +68,15 @@ function initCursor() {
 
     var xPos = (e.clientX/window.innerWidth)-0.5,
         yPos = (e.clientY/window.innerHeight)-0.5,
-        xSkew = (e.clientX/window.innerWidth)-0.5,
-        ySkew = (e.clientY/window.innerHeight)-0.5,
-        box = document.querySelectorAll(".change-text");
+        // xSkew = (e.clientX/window.innerWidth)-0.5,
+        // ySkew = (e.clientY/window.innerHeight)-0.5,
+        box = document.querySelectorAll(".intro h1");
 
     TweenLite.to(box, 0, {
-      translateY: 35 * yPos,
-      translateX: -35 * xPos,
-      rotationY: 30 * xSkew,
-      rotationX: -30 * ySkew,
+      translateY: 50 * yPos,
+      translateX: -50 * xPos,
+      // rotationY: 30 * xSkew,
+      // rotationX: -30 * ySkew,
       ease: Power3.easeOut,
       transformPerspective: 900,
       transformOrigin: 'center center'
