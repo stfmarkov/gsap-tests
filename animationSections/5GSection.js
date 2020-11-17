@@ -153,7 +153,7 @@ function init5GSection() {
         gsap.fromTo(".move-text", {translateX: 600,},
         {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 50%", ease: Power4.easeOut,},}, "start-=4");
 
-  
+
     let tl_card = gsap.timeline({
         scrollTrigger: {
             trigger: ".colored-section",
