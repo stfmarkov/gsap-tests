@@ -1,4 +1,5 @@
 function initLogoScale() {
+    if(!document.querySelector(".logo-scale__video video")) return
     const video = document.querySelector(".logo-scale__video video");
     video.loop = true;
     video.muted = true; // without this line it's not working although I have "muted" in HTML
