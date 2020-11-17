@@ -10,12 +10,13 @@ barba.init({
 
 
         return tl.addLabel("start")
+            .to(".loader__wrapper *", {opacity: 0, duration: 0,})
             .to(".loader__wrapper", {y: "100%", duration: 0,})
             .to(".loader__base", {y: "100%", duration: 0}, )
             .to(".overlay", {y: "100%", duration: 0,},)
             .to(".last", {y: "100%", duration: 0,})
 
-            .addLabel("enter")
+            .addLabel("enter-=1")
             .to(".last", {y: "0", duration: 0.7, ease: Power1.easeIn,},"enter")
             .to(".overlay", {y: "0", duration: 0.7, ease: Power1.easeIn,},"enter+=0.13" )
             .to(".loader__base", {y: "0", duration: 0.7, ease: Power1.easeIn,},"enter+=0.26")
