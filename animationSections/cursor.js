@@ -16,6 +16,7 @@ function initCursor() {
   hoverable.forEach((item) => item.classList.add("hover"));
 
   var hovers = document.querySelectorAll(".hover");
+
   var text = document.querySelectorAll(".test-text");
   gsap.set(".cursor", {
     xPercent: -50,
@@ -84,7 +85,7 @@ function initCursor() {
 
   });
 
-
+  
   hovers.forEach((hover) => {
     hover.addEventListener("mouseenter", function (event) {
       gsap.to(cur, 0.2, {
