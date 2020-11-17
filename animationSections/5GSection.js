@@ -81,8 +81,51 @@ function init5GSection() {
         },
     });
     tl_middle
-        .to(".middle h3", {opacity: 1, duration: 0.7})
-        .to(".middle a", {opacity: 1, duration: 0.7})
+        .to(".middle", {opacity: 1, duration: 0.7})
+
+    const tl_parallax = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".middle",
+            start: "top 90%",
+            end: "top top",
+            scrub: true,
+        }
+    });
+
+    gsap.utils.toArray(".parallax").forEach(layer => {
+        const depth = layer.dataset.depth;
+        const movement = -(layer.offsetHeight * depth)
+        tl_parallax.to(layer, {y: movement, ease: "none"}, 0)
+    });
+
+
+    const tl_we = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".we-get",
+            start: "top 90%",
+            end: "top top",
+            scrub: true,
+        }
+    });
+
+    gsap.utils.toArray(".parallax").forEach(layer => {
+        const depthwe = layer.dataset.depth;
+        const movementwe = -(layer.offsetHeight * depthwe)
+        tl_we.to(layer, {y: movementwe, ease: "none"}, 0)
+    });
+
+    const tl_we_text = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".we-get",
+            start: "top 90%",
+            end: "1700px",
+            scrub: true,
+        }
+    });
+
+    tl_we_text
+        .fromTo(".move-text.get", {translateX: 0,},
+        {translateX: -600,duration: 1,}, "-=1.2")
 
 
     // document.querySelector('video').playbackRate = 2.5;
@@ -152,6 +195,8 @@ function init5GSection() {
 
         gsap.fromTo(".move-text", {translateX: 600,},
         {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 50%", ease: Power4.easeOut,},}, "start-=4");
+
+
 
 
     let tl_card = gsap.timeline({

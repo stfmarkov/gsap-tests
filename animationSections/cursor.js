@@ -73,8 +73,8 @@ function initCursor() {
         box = document.querySelectorAll(".intro h1");
 
     TweenLite.to(box, 0, {
-      translateY: 50 * yPos,
-      translateX: -50 * xPos,
+      translateY: 60 * yPos,
+      translateX: 60 * xPos,
       // rotationY: 30 * xSkew,
       // rotationX: -30 * ySkew,
       ease: Power3.easeOut,
