@@ -793,7 +793,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1000;
   padding: 20px;
   transition: all .3s ease;
   /*background: rgba(255, 255, 255, 0.6);*/
@@ -1262,6 +1262,7 @@ video {
   bottom: 0;
   right: 0;
   z-index: 3000;
+  overflow: hidden;
 }
 
 .loader__base {
