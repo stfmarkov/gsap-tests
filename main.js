@@ -59,4 +59,5 @@ function setupAnimations(params) {
     initVideoSection();
     initLogoScale();
     initHorizontalScroll();
+    initParallax();
 }
