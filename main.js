@@ -57,4 +57,5 @@ function setupAnimations(params) {
     init5GSection();
     initVideoSection();
     initLogoScale();
+    initHorizontalScroll();
 }
