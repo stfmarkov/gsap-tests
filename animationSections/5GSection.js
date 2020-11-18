@@ -27,6 +27,19 @@ function init5GSection() {
     tl_intro.to(".intro h1", {opacity: 0, duration: 0.7,})
     // tl_intro.to(".intro h1 .shadow", {width: "270%", duration:0.7})
 
+    const tl_move = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".coin-section",
+            start: "top 50%",
+            end: "2500px",
+            scrub: true,
+        }
+    });
+
+    tl_move
+        .fromTo(".move-text-intro", {translateX: 0,},
+            {translateX: -1500,duration: 1,})
+
     let tl_coin = gsap.timeline({
       scrollTrigger: {
         trigger: ".coin-section",
@@ -92,13 +105,6 @@ function init5GSection() {
         }
     });
 
-    gsap.utils.toArray(".parallax").forEach(layer => {
-        const depth = layer.dataset.depth;
-        const movement = -(layer.offsetHeight * depth)
-        tl_parallax.to(layer, {y: movement, ease: "none"}, 0)
-    });
-
-
     const tl_we = gsap.timeline({
         scrollTrigger: {
             trigger: ".we-get",
@@ -109,9 +115,10 @@ function init5GSection() {
     });
 
     gsap.utils.toArray(".parallax").forEach(layer => {
-        const depthwe = layer.dataset.depth;
-        const movementwe = -(layer.offsetHeight * depthwe)
-        tl_we.to(layer, {y: movementwe, ease: "none"}, 0)
+        const depth = layer.dataset.depth;
+        const movement = -(layer.offsetHeight * depth)
+        tl_we.to(layer, {y: movement, ease: "none"}, 0);
+        tl_parallax.to(layer, {y: movement, ease: "none"}, 0);
     });
 
     const tl_we_text = gsap.timeline({
@@ -193,8 +200,8 @@ function init5GSection() {
       .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
 
 
-        gsap.fromTo(".move-text", {translateX: 600,},
-        {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 50%", ease: Power4.easeOut,},}, "start-=4");
+        // gsap.fromTo(".move-text", {translateX: 600,},
+        // {translateX: -200, scrollTrigger: {trigger: ".move-text", scrub: 0.3, start: "top 50%", ease: Power4.easeOut,},}, "start-=4");
 
 
 
