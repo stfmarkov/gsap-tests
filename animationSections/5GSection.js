@@ -53,11 +53,11 @@ function init5GSection() {
         .to(".coin-section", {backgroundColor: "rgb(242 232 226)", duration: 0.4,}, "start-coin+=0.5")
         .to(".menu .started", {backgroundColor: "rgb(231 168 149)", duration: 0.2,}, "start-coin+=0.5")
         .to(".coin-section h2 span:last-of-type", {x: "60px", duration: 0.3,}, "start-coin+=0.6")
-        // .to(".coin-section h2 span:last-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
+        .to(".coin-section h2 span:last-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section h2 span", {opacity: 1, duration: 0.2,}, "start-coin+=0.6")
-        // .to(".coin-section h2 span i", {opacity: 1, duration: 0.2,}, "start-coin+=0.7")
+        .to(".coin-section h2 span i", {opacity: 1, duration: 0.2,}, "start-coin+=0.7")
         .to(".coin-section h2 span:first-of-type", {x: "-60px", duration: 0.3,}, "start-coin+=0.6")
-        // .to(".coin-section h2 span:first-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
+        .to(".coin-section h2 span:first-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section", {backgroundColor: "rgb(255, 255, 255)", duration: 0.4,}, "start-coin+=1")
         .to(".menu .started", {backgroundColor: "rgb(89, 168, 176)", duration: 0.2,}, "start-coin+=1.2")
         .to(".coin-section .base", {backgroundImage: "linear-gradient(to top, rgba(255, 255, 255, 0), transparent)", duration: 0.4,}, "start-coin+=1")
@@ -74,10 +74,10 @@ function init5GSection() {
 
         const img = Math.ceil(progress / step);
 
-        console.log(img);
+        // console.log(img);
 
 
-        console.log(progress);
+        // console.log(progress);
         if (!document.querySelector(".coin-box img")) return;
         document.querySelector(
             ".coin-box img"
@@ -96,29 +96,37 @@ function init5GSection() {
     tl_middle
         .to(".middle", {opacity: 1, duration: 0.7})
 
-    const tl_parallax = gsap.timeline({
+
+
+    let tl_green = gsap.timeline({
         scrollTrigger: {
             trigger: ".middle",
             start: "top 90%",
-            end: "top top",
-            scrub: true,
-        }
+            end: "900px",
+            scrub: 0.25,
+        },
     });
 
-    const tl_we = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".we-get",
-            start: "top 90%",
-            end: "top top",
-            scrub: true,
-        }
-    });
+    tl_green.to("body", {backgroundColor: "rgb(236 244 245)", duration: 0.2,})
+    tl_green.to(".coin-section", {backgroundColor: "rgb(236 244 245)", duration: 0.2,},"-=0.2")
+    tl_green.to("body", {backgroundColor: "rgb(255 255 255)", duration: 0.2,})
+
+
 
     gsap.utils.toArray(".parallax").forEach(layer => {
+
+        const tl_we = gsap.timeline({
+            scrollTrigger: {
+                trigger: layer,
+                start: "top 120%",
+                end: "top top",
+                scrub: true,
+            }
+        });
+
         const depth = layer.dataset.depth;
         const movement = -(layer.offsetHeight * depth)
         tl_we.to(layer, {y: movement, ease: "none"}, 0);
-        tl_parallax.to(layer, {y: movement, ease: "none"}, 0);
     });
 
     const tl_we_text = gsap.timeline({
@@ -132,36 +140,12 @@ function init5GSection() {
 
     tl_we_text
         .fromTo(".move-text.get", {translateX: 0,},
-        {translateX: -600,duration: 1,}, "-=1.2")
+        {translateX: -600,duration: 1,}, "-=1.3")
+
+
 
 
     // document.querySelector('video').playbackRate = 2.5;
-    if (!document.querySelector(".loader")) return;
-
-    let tl = gsap.timeline({ totalDuration: 20 });
-
-
-    tl.addLabel("start")
-        .to(".loader__wrapper img", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
-        .to(".loader__wrapper svg", {scaleX: 1.5,scaleY: 1.5, duration: 1,}, "start+=0.7")
-        .to(".loader__wrapper img", {opacity: 1, duration: 0.7, ease: Power3.easeIn,}, "start+=1.25")
-        .to(".loader .shape1", {strokeDashoffset: 0, duration: 1.5, ease: Power3.easeIn,}, "start")
-        .to(".loader .shape0", {strokeDashoffset: 0, duration: 1.3, ease: Power3.easeIn,}, "start+=0.15")
-        .addLabel("exit")
-        .to(".loader__wrapper", {y: "-100%", duration: 0.7, ease: Power4.easeIn,})
-        .to(".loader__base", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.13")
-        .to(".overlay", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.26")
-        .call(() => {
-            home();
-        })
-        .to(".last", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.39")
-        .call(() => {
-            document.querySelector(".loader").classList.add("loader__done");
-        })
-
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    };
 
   // const animationLength = 1700; // Set the time to complete the animation
 
@@ -264,6 +248,7 @@ function init5GSection() {
 
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
     gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
+    
 
 
 

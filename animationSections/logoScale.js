@@ -74,25 +74,6 @@ function initLogoScale() {
     //         ease:Linear.easeNone,
     //     });
     //
-    //     // window.addEventListener("mousemove", (e) => {
-    //     //
-    //     //     var xPos = (e.clientX/window.innerWidth)-0.5,
-    //     //         yPos = (e.clientY/window.innerHeight)-0.5,
-    //     //         xSkew = (e.clientX/window.innerWidth)-0.5,
-    //     //         ySkew = (e.clientY/window.innerHeight)-0.5;
-    //     //
-    //     //     TweenLite.to(actions, 0, {
-    //     //
-    //     //         rotationY: 15 * xSkew,
-    //     //         rotationX: -15 * ySkew,
-    //     //         translateY: 45 * yPos,
-    //     //         translateX: -45 * xPos,
-    //     //         ease: Power3.easeOut,
-    //     //         transformPerspective: 900,
-    //     //         transformOrigin: 'center center'
-    //     //     });
-    //     // });
-    //
     // }
 
     // function logoScale(e) {
