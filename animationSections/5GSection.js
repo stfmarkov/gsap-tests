@@ -143,7 +143,7 @@ function init5GSection() {
         {translateX: -600,duration: 1,}, "-=1.3")
 
 
-
+    
 
     // document.querySelector('video').playbackRate = 2.5;
 
@@ -248,7 +248,7 @@ function init5GSection() {
 
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
     gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
-    
+
 
 
 
