@@ -10,6 +10,7 @@ function initLoader() {
         .to(".loader .shape1", {strokeDashoffset: 0, duration: 1.5, ease: Power3.easeIn,}, "start")
         .to(".loader .shape0", {strokeDashoffset: 0, duration: 1.3, ease: Power3.easeIn,}, "start+=0.15")
         .addLabel("exit")
+        .call( () => window.scrollTo(0, 0))
         .to(".loader__wrapper", {y: "-100%", duration: 0.7, ease: Power4.easeIn,})
         .to(".loader__base", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.13")
         .to(".overlay", {y: "-100%", duration: 0.7, ease: Power4.easeIn,}, "exit+=0.26")
@@ -20,8 +21,4 @@ function initLoader() {
         .call(() => {
             document.querySelector(".loader").classList.add("loader__done");
         })
-
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    };
 }
