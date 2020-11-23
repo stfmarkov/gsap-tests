@@ -1,5 +1,42 @@
 
+function scrollSmooth() {
+    gsap.to(".scrollbar", {
+        yPercent: 400,
+        ease: "none",
+        scrollTrigger: {
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.5
+        }
+    })
+}
+
 function init5GSection() {
+
+    ScrollTrigger.create({
+        trigger: ".intro",
+        start: "top top",// when the top of the trigger hits the top of the viewport
+        // end: `+=${animationLength}px`,
+        end: "+=1600px",
+        pin: true,
+    });
+
+    let tl_sc = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".intro-scale",
+            start: "top top",
+            end: "+=1500px",
+            scrub: true,
+        },
+    });
+
+    tl_sc
+        .from(".intro-scale h1", {scale: 120})
+        .to(".intro .first", {opacity: 0, scale: 0.8}, "-=0.7")
+        .to(".intro .logo-bg", {opacity: 0, scale: 0.4}, "-=0.7")
+
+
+
 
     if (!document.querySelector(".coin-box")) return;
     const animationLength = 1500;
@@ -16,16 +53,17 @@ function init5GSection() {
         onUpdate: rotate,
     });
 
-    let tl_intro = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".intro",
-            start: "top top",
-            end: "400px",
-            scrub: 0.25,
-        },
-    });
-    tl_intro.to(".intro h1", {opacity: 0, duration: 0.7,})
-    // tl_intro.to(".intro h1 .shadow", {width: "270%", duration:0.7})
+    // let tl_intro = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".intro",
+    //         start: "top top",
+    //         end: "400px",
+    //         scrub: 0.25,
+    //     },
+    // });
+    // tl_intro.to(".intro h1", {opacity: 0, duration: 0.7,})
+
+
 
     const tl_move = gsap.timeline({
         scrollTrigger: {
@@ -51,7 +89,7 @@ function init5GSection() {
 
     tl_coin.addLabel("start-coin")
         .to(".coin-section", {backgroundColor: "rgb(242 232 226)", duration: 0.4,}, "start-coin+=0.5")
-        .to(".menu .started", {backgroundColor: "rgb(231 168 149)", duration: 0.2,}, "start-coin+=0.5")
+        .to(".menu-holder .started", {backgroundColor: "rgb(231 168 149)", duration: 0.2,}, "start-coin+=0.5")
         .to(".coin-section h2 span:last-of-type", {x: "60px", duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section h2 span:last-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section h2 span", {opacity: 1, duration: 0.2,}, "start-coin+=0.6")
@@ -59,7 +97,7 @@ function init5GSection() {
         .to(".coin-section h2 span:first-of-type", {x: "-60px", duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section h2 span:first-of-type i", {x: "0px", duration: 0.3,}, "start-coin+=0.6")
         .to(".coin-section", {backgroundColor: "rgb(255, 255, 255)", duration: 0.4,}, "start-coin+=1")
-        .to(".menu .started", {backgroundColor: "rgb(89, 168, 176)", duration: 0.2,}, "start-coin+=1.2")
+        .to(".menu-holder .started", {backgroundColor: "rgb(89, 168, 176)", duration: 0.2,}, "start-coin+=1.2")
         .to(".coin-section .base", {backgroundImage: "linear-gradient(to top, rgba(255, 255, 255, 0), transparent)", duration: 0.4,}, "start-coin+=1")
         .to(".coin-section:after", {css: {opacity: 0}, duration: 0.4,}, "start-coin+=1")
         .to(".coin-section h2", {opacity: 0, duration: 0.2,}, "start-coin+=1")
@@ -88,20 +126,21 @@ function init5GSection() {
     let tl_middle = gsap.timeline({
         scrollTrigger: {
             trigger: ".middle",
-            start: "top 80%",
-            end: "top 50%",
+            start: "top 90%",
+            end: "top 15%",
             scrub: 0.25,
         },
     });
     tl_middle
         .to(".middle", {opacity: 1, duration: 0.7})
+        .to(".middle", {opacity: 0, duration: 0.8}, "+=3")
 
 
 
     let tl_green = gsap.timeline({
         scrollTrigger: {
             trigger: ".middle",
-            start: "top 90%",
+            start: "top 100%",
             end: "900px",
             scrub: 0.25,
         },
@@ -143,45 +182,45 @@ function init5GSection() {
         {translateX: -600,duration: 1,}, "-=1.3")
 
 
-    
+
 
     // document.querySelector('video').playbackRate = 2.5;
 
   // const animationLength = 1700; // Set the time to complete the animation
 
   // pin the section
-  ScrollTrigger.create({
-    trigger: ".test-text",
-    start: "top top",// when the top of the trigger hits the top of the viewport
-    // end: `+=${animationLength}px`,
-    end: "1200px",
-    pin: true,
-  });
-
-  let tl_v = gsap.timeline({
-      scrollTrigger: {
-      trigger: ".first-screen",
-      start: "top top",
-      scrub: true,
-    },
-  });
-
-  tl_v
-      .addLabel("start")
-      .from(".center", {scaleX: 2.7, scaleY: 2.7, duration: 1,}, "start")
-      .to(".change-text", {opacity: 0, duration: 0.2,}, "start+=0.7")
-      .to(".blend video", {opacity: 0, duration: 0.2,}, "start+=0.7")
-      .to(".ground", {opacity: 0, duration: 0.3,}, "start+=0.7")
-      .from(".text-two", {opacity: 0, duration: 0.2,}, "start+=0.7")
-      .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
-      .from(".left h3", { opacity: 0, duration: 0.2,}, "start+=1")
-      .from(".left .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
-
-      .addLabel("right")
-      .from(".right", {scaleX: 4.5, scaleY: 4.5, x: "1700px", duration: 1,}, "start+=0.25")
-      .from(".right h3", {opacity: 0, duration: 0.2,}, "start+=1")
-      .from(".right .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
-      .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
+  // ScrollTrigger.create({
+  //   trigger: ".test-text",
+  //   start: "top top",// when the top of the trigger hits the top of the viewport
+  //   // end: `+=${animationLength}px`,
+  //   end: "1200px",
+  //   pin: true,
+  // });
+  //
+  // let tl_v = gsap.timeline({
+  //     scrollTrigger: {
+  //     trigger: ".first-screen",
+  //     start: "top top",
+  //     scrub: true,
+  //   },
+  // });
+  //
+  // tl_v
+  //     .addLabel("start")
+  //     .from(".center", {scaleX: 2.7, scaleY: 2.7, duration: 1,}, "start")
+  //     .to(".change-text", {opacity: 0, duration: 0.2,}, "start+=0.7")
+  //     .to(".blend video", {opacity: 0, duration: 0.2,}, "start+=0.7")
+  //     .to(".ground", {opacity: 0, duration: 0.3,}, "start+=0.7")
+  //     .from(".text-two", {opacity: 0, duration: 0.2,}, "start+=0.7")
+  //     .from(".left", {scaleX: 4.5, scaleY: 4.5, x: "-1700px", duration: 1,}, "start+=0.25")
+  //     .from(".left h3", { opacity: 0, duration: 0.2,}, "start+=1")
+  //     .from(".left .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
+  //
+  //     .addLabel("right")
+  //     .from(".right", {scaleX: 4.5, scaleY: 4.5, x: "1700px", duration: 1,}, "start+=0.25")
+  //     .from(".right h3", {opacity: 0, duration: 0.2,}, "start+=1")
+  //     .from(".right .over", {scaleX: 1.5, scaleY: 1.5, opacity: 0, duration: 0.2,}, "start+=1.2")
+  //     .from(".logo-sign", {opacity: 0, scaleX: 1.5, scaleY: 1.5, duration: 0.2,}, "start+=0.8")
 
 
         // gsap.fromTo(".move-text", {translateX: 600,},
@@ -218,7 +257,6 @@ function init5GSection() {
             start: "top top",
             end: "100%-=800px",
             scrub: true,
-            toggleClass: {targets: "nav", className: "active"}
         },
     });
 
@@ -228,6 +266,7 @@ function init5GSection() {
         .to(".top-text span", {y: "0px", scale: 0.8, duration: 1,}, "text-start")
         .from(".title", {y: "-898px", duration: 1,}, "text-start")
         .to(".title", {y: "0px", scale: 0.8, duration: 1,}, "text-start")
+
 
 
 
@@ -248,6 +287,63 @@ function init5GSection() {
 
 // make the right edge "stick" to the scroll bar. force3D: true improves performance
     gsap.set(".skewElem", {transformOrigin: "right center", force3D: true});
+
+
+    gsap.utils.toArray('.we-get-text').forEach((el, index) => {
+        const ts_show = gsap.timeline({
+        scrollTrigger: {
+            trigger: el,
+            toggleActions: "play none none reset",
+            start: "top bottom",
+        },
+    });
+
+
+        ts_show
+        .to(".we-get-text h3 div:first-of-type span", {y: 0, opacity: 1, duration: 0.4, ease: Circ.easeOut,})
+        .to(".we-get-text h3 div:last-of-type span", {y: 0, opacity: 1, duration: 0.4, ease: Circ.easeOut,}, "-=0.2")
+        .to(".we-get-text .subtitle div:first-of-type span", {y: 0, opacity: 1, duration: 0.4, ease: Circ.easeOut,}, "-=0.3")
+        .to(".we-get-text .subtitle div:last-of-type span", {y: 0, opacity: 1, duration: 0.4, ease: Circ.easeOut}, "-=0.3")
+        .to(".we-get-text .actions .text", {opacity: 1, y: 0, duration: 0.6, ease: Circ.easeOut,}, "-=0.3")
+        .to(".we-get-text .actions .signature .label span", {opacity: 1, y: 0, duration: 0.6, ease: Circ.easeOut,}, "-=0.3")
+
+    })
+
+    let tl_hide = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".actions .text",
+            start: "top 35%",
+            end: "top 5%",
+            scrub: true,
+        },
+    })
+    tl_hide.to(".actions .text", {opacity: 0, duration: 0.5});
+
+    gsap.utils.toArray('.signature').forEach((el, index) => {
+        let tl_signature = gsap.timeline({
+            scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                end: "top 20%",
+                scrub: true,
+                // toggleActions: "play none none reset",
+            },
+        });
+        tl_signature
+            .addLabel("signature")
+            .fromTo(".signature #Layer_3_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_2 path", 0.9, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_4_1_ path", 0.6, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_5_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_6_1_ path", 0.9, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_7_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_8_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_9_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_10_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_11_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+            .fromTo(".signature #Layer_12_1_ path", 0.4, {drawSVG: 0,}, {drawSVG: "100%",})
+
+    })
 
 
 

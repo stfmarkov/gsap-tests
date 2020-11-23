@@ -1,17 +1,21 @@
 function home() {
-    var tl = gsap.timeline(),
-        mySplitText = new SplitText(".intro h1", {type: "words,chars"}),
+    var tl = gsap.timeline()
+        mySplitText = new SplitText(".intro .first", {type: "words,chars"}),
         words = mySplitText.chars; //an array of all the divs that wrap each character
     tl
     .addLabel("start")
     .from(words, {
         duration: 0.5,
         opacity: 0,
-        y: 25,
+        y: 30,
         transformOrigin: "top left",
         ease: "easeIn",
-        stagger: 0.02,
+        stagger: 0.05,
+        delay: 0.05,
     })
+        .to(".logo-bg", {opacity: 0.35, duration: 1})
+        .to(".side-text", {opacity: 1, duration: 0.4}, "-=0.5")
+        .to(".bottom-right-text", {opacity: 1, duration: 0.4}, "-=0.5")
         // .from(".coin-section h2 span", {
         //     duration: 1,
         //     opacity: 0,
@@ -21,7 +25,7 @@ function home() {
         //     stagger: 0.4,
         // },"start+=0.8")
 
-        .from(".menu-holder .menu-item", {
+        .from(".menu-holder .menu-item li", {
             duration: 0.5,
             opacity: 0,
             y: -35,
@@ -29,6 +33,20 @@ function home() {
             ease: "easeIn",
             stagger: 0.2,
         },"start+=0.6")
+        .from(".menu-holder .logo-item", {
+            duration: 0.5,
+            opacity: 0,
+            y: -35,
+            transformOrigin: "top left",
+            ease: "easeIn",
+        },"start+=1.1")
+        .to(".menu-holder .started", {
+            duration: 0.5,
+            opacity: 1,
+            y: 0,
+            transformOrigin: "top left",
+            ease: "easeIn",
+        },"start+=1.2")
         // .from(".blend video", {
         //     duration: 1,
         //     opacity: 0,

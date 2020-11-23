@@ -26,13 +26,15 @@ function initLogoScale() {
 
     // tl_color.to(".logo-scale__logo .filler", {backgroundColor: "rgb(26 26 26)", duration: 0.2, ease:Linear.easeNone,})
 
+
+    gsap.utils.toArray('.hide').forEach((element, index) => {
     const tscale = gsap.timeline({
         scrollTrigger: {
             trigger: ".logo-scale",
             start: "top top",
             end: `+=${animationLengthScale}px`,
             scrub: 0.15,
-            toggleClass: {targets: "nav", className: "active"}
+            toggleClass: {targets: element, className: "active"}
         },
     });
 
@@ -48,7 +50,7 @@ function initLogoScale() {
         .to(".action-call-text", {duration: 0.5, opacity: 0, translateY: "-150%", transformOrigin: "center center", ease:Linear.easeNone,}, "start+=4.3")
         .to(".logo-scale__logo .filler", {backgroundColor: "rgba(255, 255, 255, 1)", duration: 1, delay: 0, ease:Linear.easeNone,}, "start+=3.5");
 
-
+    })
 
     // tscale.call(write, null, "start+=3.5");
     //

@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="main.css" />
+<!--      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css">-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <script src="./gsap/minified/gsap.min.js"></script>
+    <script src="./gsap/minified/DrawSVGPlugin.min.js"></script>
     <script src="./gsap/minified/TextPlugin.min.js"></script>
     <script src="./gsap/minified/ScrollTrigger.min.js"></script>
-<!--    <script src="./gsap/minified/TimelineMax.min.js"></script>-->
     <script src="./gsap/minified/SplitText.min.js"></script>
 
   </head>
   <body>
+  <div class="scrollbar"></div>
   <div class="loader">
     <div class="last"></div>
     <div class="overlay"></div>
@@ -61,69 +63,39 @@
         </svg>
     </div>
   </div>
-
-
-    <nav>
-      <div class="menu-holder">
-        <div class="menu-btn menu-item over"><span>Menu</span></div>
-        <img src="logo-dark-nav.svg" alt="" style="max-height: 70px;" class="over menu-item logo-item"/>
-        <ul class="menu menu-item">
-          <li class="over"><a href="#" class="started">Get Started</a></li>
+    <div class="mobile-menu">
+        <img src="logo-dark-nav.svg" alt=""/>
+        <ul>
+            <li><a href="#" data-text="Learn">Learn</a></li>
+            <li><a href="#" data-text="Love">Love</a></li>
+            <li ><a href="#" data-text="Loan">Loan</a></li>
         </ul>
+        <div class="menu-trigger over"></div>
+    </div>
+    <nav class="hide">
+      <div class="menu-holder">
+          <ul class="menu menu-item">
+              <li><a href="#">Learn</a></li>
+              <li><a href="#">Love</a></li>
+              <li ><a href="#">Loan</a></li>
+          </ul>
+<!--        <div class="menu-btn menu-item over"><span>Menu</span></div>-->
+          <a href="#"><img src="logo-dark-nav.svg" alt="" style="max-height: 70px;" class="over menu-item logo-item"/></a>
+          <a href="#" class="started menu-trigger">Get Started</a>
       </div>
     </nav>
     <div class="text-section">
-<!--        <div class="test-text">-->
-
-<!--          <div class="first-screen">-->
-<!--            <div class="left box">-->
-<!--              <h3>I want <br> to buy a home.</h3>-->
-<!--              <span>Lorem ipsum dolor.</span>-->
-<!--              <img src="buy-home-img.png" alt=""/>-->
-<!--              <a class="over" href="#">Get Started</a>-->
-<!--            </div>-->
-<!--            <div class="center">-->
-
-<!--              <div class="blend">-->
-<!--                <img class="logo-sign" src="logo-sign-green.svg" alt=""/>-->
-<!--                <video  autoplay="" loop="" muted=""><source src="./new-coin.mp4" type="video/mp4" style="max-width: 400px;">-->
-<!--                  Your browser does not support HTML5 video.-->
-<!--                </video>-->
-<!--    &lt;!&ndash;              <div class="coin coin2" style="max-width: 200px; overflow: hidden; margin: 0 auto">&ndash;&gt;-->
-<!--    &lt;!&ndash;                <img src="./coin-sprite-half.png" alt="" style="max-height: 200px;"/>&ndash;&gt;-->
-<!--    &lt;!&ndash;              </div>&ndash;&gt;-->
-<!--                <h1>-->
-<!--    &lt;!&ndash;              <img class="logo-sign" src="cazle.gif" alt=""/>&ndash;&gt;-->
-
-<!--                  <div class="change-text ">-->
-<!--                      <div class="label">Hi, we're Cazle</div>-->
-<!--                      We’re a different-->
-<!--                    <div class="bottom-text">kind of Mortgage Lender.</div>-->
-<!--                  </div>-->
-<!--                  <div class="text-two">-->
-<!--                    <div>We've helped</div>-->
-<!--                    <p>thousands of clients since 1999 to achieve their dream of home ownership or refinancing.</p>-->
-<!--                  </div>-->
-<!--                </h1>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="right box">-->
-<!--              <h3>I want to <br> refinance my home.</h3>-->
-<!--              <span>Lorem ipsum dolor.</span>-->
-<!--              <img src="refinance-home-img.png" alt=""/>-->
-<!--              <a class="over" href="#">Get Started</a>-->
-<!--            </div>-->
-<!--            <div class="move-text two">Dream Big. Barrow Smart. Dream Big. Barrow Smart. Dream Big. Barrow Smart.</div>-->
-<!--            <div class="ground"></div>-->
-<!--          </div>-->
-<!--        </div>-->
+        <div class="side-text hide">Dream big. Borrow smart</div>
+        <div class="bottom-right-text hide">Cazle Mortgage ®</div>
         <section class="intro">
-            <h1>
-                <div class="shadow"></div>
-                <div class="label">Hi, We're Cazle</div>
-                <div class="main">We’re a different</div>
-                <div class="small">kind of Mortgage Lender.</div>
-            </h1>
+            <div class="logo-bg"></div>
+            <div class="first"><div class="label">Hi, We're Cazle.</div></div>
+            <div class="intro-scale">
+                <h1>
+                    <div class="main">We’re a different</div>
+                    <div class="small">kind of Mortgage Lender.</div>
+                </h1>
+            </div>
         </section>
         <section class="coin-section">
             <h2>
@@ -142,21 +114,78 @@
         </section>
         <section class="we-get">
             <div class="move-text get">Modern mortgage convenience. Modern mortgage convenience.</div>
-            <div class="we-get-text parallax" data-depth="0.40">
-                <div class="titles">
-                    <h3>We <br>get that...</h3>
-                    <div class="subtitle">It’s not just your <br>home- It’s your castle.</div>
+            <div class="we-get-text">
+                <div class="titles parallax" data-depth="0.40">
+                    <h3>
+                        <div><span>We</span></div>
+                        <div><span>get that...</span></div>
+                    </h3>
+                    <div class="subtitle">
+                        <div><span>It’s not just your </span></div>
+                        <div><span>home- It’s your castle.</span></div>
+                    </div>
                     <img src="./bush.png" alt="">
                 </div>
-                <div class="actions">
+                <div class="actions parallax" data-depth="0.20">
                     <p class="text">Your castle - where you plant your flag, build your kingdom, and gather with those who mean the most to you. Our approach is different, we don’t tell you it’s as simple as pushing a button when we all know the real world can be a bit more complicated. We’re experienced professionals - real people helping real people - and we use technology to improve service, not replace it. We work hard to give you the right tools and tailored information to make smart decisions for your unique mortgage situation. And when obstacles come up, we storm the gates and swim across the moats to make your dream a reality.</p>
                     <div class="signature">
-                        <div class="label">President</div>
+                        <div class="label"><span>President</span></div>
                         <div class="subtext">Cazle Mortgage, Ink.</div>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 439.8 141" style="enable-background:new 0 0 439.8 141;" xml:space="preserve">
+<style type="text/css">
+	.st10{fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+                            <g id="Layer_3_1_">
+	<path class="st10" d="M32.2,44.5c0,0-0.8-0.3-2.2,2c-1.4,2.3-13,25.5-12,77.7"/>
+</g>
+                            <g id="Layer_2">
+	<path class="st10" d="M4.5,81.2c0,0-4.9-1.9-1.6-12.5s13.3-30.4,38.2-41.7S64,34.8,57.4,45.1c-5.6,8.8-24.7,33.5-41.9,46
+		c24-9.9,38-3.8,39.8,2.6c1.8,6.4-1.6,24.2-22.1,38.3s-32.9,4.8-23.8-8.5s27.9-32.3,59.3-38.7"/>
+</g>
+                            <g id="Layer_4_1_">
+	<path class="st10" d="M77.9,85.2c0,0,0.1-3.8-3-4s-6.8,5.8-6.8,8.6s1,5,6.1,0.4c5.1-4.6,8.6-9.1,8.6-9.1s-1,9.4,8,7.1
+		s11.4-11.5,11.4-11.5l-4.3,14.6c0,0,7.8-14.5,10.6-14.1c2.8,0.4,2.4,4.1,5.5,5.1s8.9-2.1,11.4-7.9c-3.3,12.7-3.9,14.6-3.9,14.6
+		s8.8-16.1,11.3-15.4c2.5,0.6,2,4.1,4.8,5.9c2.8,1.8,8.6-3.2,8.6-3.2"/>
+</g>
+                            <g id="Layer_5_1_">
+	<path class="st10" d="M149.4,70.5c0,0-3.3,4.1-2.8,12c0.6,8.7,10.8-1.2,13.8-13c16.2,38.8-10.5,67.5-16.2,64.1
+		c-5.8-3.4-5.1-28.6,30.1-60.5"/>
+</g>
+                            <g id="Layer_6_1_">
+	<path class="st10" d="M238.4,2.8c0,0-19.7,28.1-13.5,89.4"/>
+</g>
+                            <g id="Layer_7_1_">
+	<path class="st10" d="M209.6,55.5c0,0,4-19.1,28.1-37s40.1-7.1,43.7,3.9c4.7,14.2-3,65.9-49.5,92.5c-41.4,23.7-35.3-15.8-5.4-36.7
+		s57.3-30.7,69.8-22.1"/>
+</g>
+                            <g id="Layer_8_1_">
+	<path class="st10" d="M297.9,52.8c0,0-4.1,16.9,3.6,12.1c7.7-4.8,9.1-9.7,9.1-9.7"/>
+                                <path class="st10" d="M299.4,44.5c0,0-1.9,2.3-0.7,3"/>
+</g>
+                            <g id="Layer_9_1_">
+	<path class="st10" d="M319.8,51.3c0,0-3.6-4.8-7.7,2.6s-1.1,10.6,1.6,8.2c2.7-2.4,5.2-5.2,6.9-10.8c11.8,35.6-10.9,66.2-20.3,56.5
+		c-10-10.3,17.4-43.2,37.8-54.9"/>
+</g>
+                            <g id="Layer_10_1_">
+	<path class="st10" d="M347.1,47.3c0,0-3.6-4.8-7.7,2.6s-1.1,10.6,1.6,8.2c2.7-2.4,5.2-5.2,6.9-10.8c11.8,35.6-10.9,66.2-20.3,56.5
+		c-10-10.3,17.4-43.2,37.8-54.9"/>
+</g>
+                            <g id="Layer_11_1_">
+	<path class="st10" d="M367,45.2c0,0-4.1,16.9,3.6,12.1c7.7-4.8,11.6-14.9,11.6-14.9s-2.4,9.5-2.2,13.8c4.5-9.1,7.7-14.1,10-12.6
+		s1.2,8.7,7.3,8.3c6.1-0.4,11.5-8.6,11.5-8.6"/>
+                                <path class="st10" d="M368.4,36.9c0,0-1.9,2.3-0.7,3"/>
+</g>
+                            <g id="Layer_12_1_">
+	<path class="st10" d="M414,41.7c0,0,4.1,0.4,4.4-3.8c0.4-5.3-8.4-2.8-9.7,2.8c-0.9,3.9,6.5,8.7,6.5,8.7s10.5,9.2-3.8,16.3
+		c-12.4,6.2-7.9-11.2,16.4-24.5"/>
+                                <path class="st10" d="M436,40.6c0,0-1.3-0.5,0-1.4"/>
+</g>
+</svg>
                         <a href="#" class="btn over">More About us</a>
                     </div>
                 </div>
-                </div>
+            </div>
 
         </section>
         <section class="logo-scale">
@@ -327,15 +356,21 @@
             </div>
           </div>
     </div>
+  <footer>test footer</footer>
     <div class="cursor"></div>
   </body>
 
   <!-- Real project will use imports -->
-  <script src="main.js"></script>
   <script src="./animationSections/cursor.js"></script>
   <script src="./animationSections/5GSection.js"></script>
   <script src="./animationSections/videoSection.js"></script>
   <script src="./animationSections/phoneLockup.js"></script>
   <script src="./animationSections/logoScale.js"></script>
+  <script src="main.js"></script>
+<!--  <script type="text/javascript" src="https://unpkg.com/smooth-scrollbar@8.5.2/dist/smooth-scrollbar.js"></script>-->
+<!--  <script>-->
+<!--      var Scrollbar = window.Scrollbar;-->
+<!--      Scrollbar.init(document.querySelector('#my-scrollbar'),{damping: "0.04"});-->
+<!--  </script>-->
 
 </html>
