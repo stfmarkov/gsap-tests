@@ -31,5 +31,5 @@ window.addEventListener("load", function () {
   init5GSection();
   initVideoSection();
   initLogoScale();
-    scrollSmooth()
+  scrollSmooth()
 });

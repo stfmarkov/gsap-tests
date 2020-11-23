@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0bedb12c-be1a-49a5-add9-fbc72e38dae3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animationSections/5GSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/animationSections/5GSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animationSections/cursor.js" beforeDir="false" afterPath="$PROJECT_DIR$/animationSections/cursor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animationSections/logoScale.js" beforeDir="false" afterPath="$PROJECT_DIR$/animationSections/logoScale.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/animationSections/videoSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/animationSections/videoSection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cazle" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -63,7 +58,8 @@
       <workItem from="1605547868161" duration="17906000" />
       <workItem from="1605631793072" duration="261000" />
       <workItem from="1605728513399" duration="58541000" />
-      <workItem from="1605962660464" duration="48477000" />
+      <workItem from="1605962660464" duration="49076000" />
+      <workItem from="1606136678435" duration="4116000" />
     </task>
     <servers />
   </component>
@@ -71,15 +67,19 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1606140867249">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="274" key="FileChooserDialogImpl/3840.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606140867249" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605131433214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605131433214" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1605962724154">
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1606136684268">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605962724154" />
-    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/3840.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605527402084" />
+    <state x="656" y="343" key="com.intellij.ide.util.TipDialog/3840.0.1920.1040/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1606136684268" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1605978094909">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
